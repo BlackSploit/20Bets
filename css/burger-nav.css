@@ -62,7 +62,7 @@
     .menu-icon span,
     .menu-icon::before,
     .menu-icon::after {
-        left: -30vw;
+        left: 0;
         position: absolute;
         height: 15%;
         width: 100%;
