@@ -292,51 +292,74 @@
 
 
 
-<main class="main-container">
 
-    <div class="website-table" style="border: 1px solid #ccc; border-collapse: collapse; margin-bottom: 20px;">
-      <h2>Commission Data</h2>
-      <table class="table" style="width: 100%; border-collapse: collapse;">
-        <thead>
-          <tr>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; background-color: #f2f2f2;">Currency</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; background-color: #f2f2f2;">Commission Structure</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; background-color: #f2f2f2;">Commission Group Name</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; background-color: #f2f2f2;">Start Date</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; background-color: #f2f2f2;">Description</th>
-            <th style="border: 1px solid #ccc; padding: 10px; text-align: left; background-color: #f2f2f2;">End Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">USD</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">Referral</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">RS_25%_REF_3%_L2_2%_L3_1%</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">2024-11-13</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">Level 1|3% Level 2|2% Level 3|1%; Negative commission: Yes; (2023-06-06)</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">N/A</td>
-          </tr>
-          <tr>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">USD</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">Revenue Share</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">RS_25%_REF_3%_L2_2%_L3_1%</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">2024-11-13</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">Commission percentage: 25%; Negative commission: Yes; Administrator: 0%; MLM calculation type: Revenue; (2023-06-06)</td>
-            <td style="border: 1px solid #ccc; padding: 10px; text-align: left;">N/A</td>
-          </tr>
-        </tbody>
-      </table>
-  
-      <div class="pagination" style="display: flex; align-items: center;">
-        <button class="prev-button" style="background-color: #f2f2f2; border: none; padding: 5px 10px; cursor: pointer;">&lt;</button>
-        <span class="page-number">1</span>
-        <button class="next-button" style="background-color: #f2f2f2; border: none; padding: 5px 10px; cursor: pointer;">&gt;</button>
-        <select class="page-size" style="background-color: #f2f2f2; border: none; padding: 5px 10px; cursor: pointer;">
-          <option value="10">10</option>
-        </select>
+<main class="main-container">
+    <div style="padding: 20px; font-family: Arial, sans-serif; max-width: 1200px; margin: auto;">
+        <!-- Filter Section -->
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; align-items: center;">
+          <select style="padding: 8px; width: 120px; border: 1px solid #ccc; border-radius: 4px;">
+            <option>USD</option>
+          </select>
+          <select style="padding: 8px; width: 120px; border: 1px solid #ccc; border-radius: 4px;">
+            <option>Select Country</option>
+          </select>
+          <input type="text" placeholder="Marketing tool ID" style="padding: 8px; width: 180px; border: 1px solid #ccc; border-radius: 4px;">
+          <select style="padding: 8px; width: 150px; border: 1px solid #ccc; border-radius: 4px;">
+            <option>All Websites</option>
+          </select>
+          <select style="padding: 8px; width: 150px; border: 1px solid #ccc; border-radius: 4px;">
+            <option>Select Campaign</option>
+          </select>
+          <input type="text" placeholder="Player ID" style="padding: 8px; width: 150px; border: 1px solid #ccc; border-radius: 4px;">
+          <select style="padding: 8px; width: 150px; border: 1px solid #ccc; border-radius: 4px;">
+            <option>Registration Source</option>
+          </select>
+          <input type="text" placeholder="Sub ID" style="padding: 8px; width: 150px; border: 1px solid #ccc; border-radius: 4px;">
+          <input type="checkbox" style="margin-left: 10px;"><label style="margin-right: 15px;">New players only</label>
+          <input type="checkbox"><label>Non-depositing players only</label>
+          <button style="padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">GENERATE REPORT</button>
+        </div>
+      
+        <!-- Data Table Section -->
+        <div style="margin-top: 20px; border: 1px solid #ddd; border-radius: 4px; overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="background-color: #4CAF50; color: white; text-align: left;">
+                <th style="padding: 10px; border-bottom: 1px solid #ddd;">Website ID</th>
+                <th style="padding: 10px; border-bottom: 1px solid #ddd;">Website</th>
+                <th style="padding: 10px; border-bottom: 1px solid #ddd;">SUBID</th>
+                <th style="padding: 10px; border-bottom: 1px solid #ddd;">Player ID</th>
+                <th style="padding: 10px; border-bottom: 1px solid #ddd;">Registration date</th>
+                <th style="padding: 10px; border-bottom: 1px solid #ddd;">Country</th>
+                <th style="padding: 10px; border-bottom: 1px solid #ddd;">Sum of all deposits</th>
+                <th style="padding: 10px; border-bottom: 1px solid #ddd;">Company profit (total)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: #e6f7e6; text-align: left;">
+                <td style="padding: 12px; border-bottom: 1px solid #ddd;" colspan="8" align="center">No information</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      
+        <!-- Pagination Section -->
+        <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+          <span>Records from 0 to 0 (0 records in total)</span>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <button style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; background-color: #f0f0f0;">&lt;</button>
+            <span>0</span>
+            <button style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; background-color: #f0f0f0;">&gt;</button>
+            <select style="padding: 8px; width: 60px; border: 1px solid #ccc; border-radius: 4px;">
+              <option>10</option>
+              <option>20</option>
+              <option>50</option>
+            </select>
+          </div>
+        </div>
       </div>
-      <p class="records-info" style="margin-top: 10px; font-size: 12px; color: #888;">Records from 1 to 2 (2 records in total)</p>
-    </div>
+      
+  
   
   </main>
   
