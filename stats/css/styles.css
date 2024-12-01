@@ -293,4 +293,6 @@ body {
   margin-right: 8px;
 }
 
-</style>
+body > div > header > div.header-right{
+  font-size: 15px;
+}
