@@ -292,74 +292,146 @@
 
 <main class="main-container">
 
-    <div style="padding: 20px; font-family: Arial, sans-serif;">
-        <!-- Filter Section -->
-        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-          <select style="padding: 8px; width: 100px;">
-            <option>USD</option>
-          </select>
-          <select style="padding: 8px; width: 150px;">
-            <option>All</option>
-          </select>
-          <input type="text" placeholder="Marketing tool ID" style="padding: 8px; width: 150px;">
-          <select style="padding: 8px; width: 150px;">
-            <option>Exact period</option>
-          </select>
-          <input type="date" value="2024-11-20" style="padding: 8px; width: 150px;">
-          <input type="date" value="2024-11-20" style="padding: 8px; width: 150px;">
-          <button style="padding: 8px 20px; background-color: #28a745; color: white; border: none; cursor: pointer;">GENERATE REPORT</button>
-        </div>
-      
-        <!-- Report Table Section -->
-        <div style="border: 1px solid #ddd; overflow-x: auto;">
-          <table style="width: 100%; border-collapse: collapse;">
-            <tbody>
-              <tr style="background-color: #e6f7e6;">
-                <td style="padding: 10px; border: 1px solid #ddd;">Views</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd; background-color: #e6f7e6;">Clicks</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-              <tr style="background-color: #e6f7e6;">
-                <td style="padding: 10px; border: 1px solid #ddd;">Direct links</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd; background-color: #e6f7e6;">Clicks/Views</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-              <tr style="background-color: #e6f7e6;">
-                <td style="padding: 10px; border: 1px solid #ddd;">Registrations</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd; background-color: #e6f7e6;">Registrations/clicks ratio</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-              <tr style="background-color: #e6f7e6;">
-                <td style="padding: 10px; border: 1px solid #ddd;">Registrations with deposits</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd; background-color: #e6f7e6;">Registrations with deposits/Registrations ratio</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-              <tr style="background-color: #e6f7e6;">
-                <td style="padding: 10px; border: 1px solid #ddd;">Total new deposit amount</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-              <!-- Add additional rows as per requirements, following the pattern for alternating background color -->
-              <tr>
-                <td style="padding: 10px; border: 1px solid #ddd; background-color: #e6f7e6;">Overall commission</td>
-                <td style="padding: 10px; border: 1px solid #ddd;"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <div style="width: 100%; padding: 20px; box-sizing: border-box; font-family: Arial, sans-serif;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <div style="flex: 1; margin-right: 10px;">
+        <label for="currency" style="font-size: 14px; display: block;">Currency</label>
+        <select id="currency" style="width: 100%; padding: 8px; font-size: 14px;">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
       </div>
-      
+  
+      <div style="flex: 1; margin-right: 10px;">
+        <label for="website" style="font-size: 14px; display: block;">Website</label>
+        <select id="website" style="width: 100%; padding: 8px; font-size: 14px;">
+          <option value="all">All</option>
+          <option value="site1">Site 1</option>
+        </select>
+      </div>
+  
+      <div style="flex: 1; margin-right: 10px;">
+        <label for="toolId" style="font-size: 14px; display: block;">Marketing tool ID</label>
+        <input type="text" id="toolId" style="width: 100%; padding: 8px; font-size: 14px;" />
+      </div>
+    </div>
+  
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <div style="flex: 1; margin-right: 10px;">
+        <label for="dateStart" style="font-size: 14px; display: block;">Start Date</label>
+        <input type="date" id="dateStart" style="width: 100%; padding: 8px; font-size: 14px;" />
+      </div>
+  
+      <div style="flex: 1; margin-right: 10px;">
+        <label for="dateEnd" style="font-size: 14px; display: block;">End Date</label>
+        <input type="date" id="dateEnd" style="width: 100%; padding: 8px; font-size: 14px;" />
+      </div>
+  
+      <div style="flex: 1;">
+        <button id="generateReport" style="width: 70%; padding: 10px; font-size: 14px;margin-left: 25px ; margin-top: 10px; background-color: #00b894; color: white; border: none; border-radius: 3px; cursor: pointer;">
+          Generate Report
+        </button>
+      </div>
+    </div>
+  
+    <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: left; margin-top: 20px;">
+      <thead>
+        <!-- <tr style="background-color: #dfe6e9;">
+          <th style="padding: 10px; border: 1px solid #ccc;">Metric</th>
+          <th style="padding: 10px; border: 1px solid #ccc;">Value</th>
+        </tr> -->
+      </thead>
+      <tbody id="reportData">
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid white;">Views</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td style="padding: 10px; border: 1px solid white;">Clicks</td>
+          <td style="padding: 10px; border: 1px solid white;"></td>
+        </tr>
+
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid rgba(2, 178, 130, 0.2);">Direct Links</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td style="padding: 10px; border: 1px solid white;">Clicks/Views</td>
+          <td style="padding: 10px; border: 1px solid white;"></td>
+        </tr>
+
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid rgba(2, 178, 130, 0.2);">Registrations</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td style="padding: 10px; border: 1px solid white;">Regisrations with deposits/Registratios ratio</td>
+          <td style="padding: 10px; border: 1px solid white;"></td>
+        </tr>
+
+
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid rgba(2, 178, 130, 0.2);">Total new deposit amount</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td style="padding: 10px; border: 1px solid white;">New depositors</td>
+          <td style="padding: 10px; border: 1px solid white;"></td>
+        </tr>
+
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid rgba(2, 178, 130, 0.2);">Accounts with deposits</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td style="padding: 10px; border: 1px solid white;">Sum of all deposits</td>
+          <td style="padding: 10px; border: 1px solid white;"></td>
+        </tr>
+
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid rgba(2, 178, 130, 0.2);">Revenue</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td style="padding: 10px; border: 1px solid white;">Number of deposits</td>
+          <td style="padding: 10px; border: 1px solid white;"></td>
+        </tr>
+
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid rgba(2, 178, 130, 0.2);">Active players</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td style="padding: 10px; border: 1px solid white;">Average profit per player</td>
+          <td style="padding: 10px; border: 1px solid white;"></td>
+        </tr>
+
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid rgba(2, 178, 130, 0.2);">Bonus amount</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td style="padding: 10px; border: 1px solid white;">Total RS commission</td>
+          <td style="padding: 10px; border: 1px solid white;"></td>
+        </tr>
+
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid rgba(2, 178, 130, 0.2);">CPA</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td style="padding: 10px; border: 1px solid white;">Referral commission</td>
+          <td style="padding: 10px; border: 1px solid white;"></td>
+        </tr>
+
+        <tr style="background-color: rgba(2, 178, 130, 0.2);">
+          <td style="padding: 10px; border: 1px solid rgba(2, 178, 130, 0.2);">Overall commission</td>
+          <td style="padding: 10px; border: 1px solid #ccc;"></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
   
   
   </main>
