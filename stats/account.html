@@ -30,7 +30,6 @@
 
 
 
-
         <style>
           #mobileee {
           display: block;
@@ -53,11 +52,11 @@
           text-transform: uppercase; 
           border-radius: 5px; 
           border-color: rgb(46, 46, 46); 
-          background-color: rgb(2, 178, 130); 
+          background-color: rgb(2, 178, 130);
           transition: 0.3s; 
           font-size: 0.875em; 
           line-height: 16.1px; 
-          color: rgb(30, 30, 30); /* Black text color */
+          color: rgb(229, 229, 229);
           font-family: Arial, sans-serif; 
           font-weight: bold; 
           letter-spacing: 0.5px; 
@@ -176,13 +175,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: rgb(63, 69, 73)
+  background-color: rgb(42, 42, 42); /* Black background for title */
   color: white;
   
 }
 
 .sidebar-heading {
-  background-color: rgb(41, 41, 41);
+  background-color: #10B470;
   color: white;
   padding: 10px;
   margin: 0;
@@ -199,6 +198,12 @@
   padding: 10px 15px;
 }
 
+.sidebar-list-item a {
+  color: rgb(78, 78, 78);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
 
 .sidebar-list-item a:hover {
   color: #007bff;
@@ -209,7 +214,7 @@
 }
 
 </style>
-         <!-- Sidebar -->
+     <!-- Sidebar -->
 <aside id="sidebar">
   <div class="sidebar-title">
     <div class="sidebar-brand">
@@ -292,14 +297,9 @@
     
   </ul>
 </aside>
+<!-- End Sidebar -->
 
 
-      <!-- Main -->
-      <main class="main-container">
-        <div class="main-title">
-          <br>
-          <!-- <h2>Main Page</h2> -->
-        </div>
 
 
 
@@ -311,215 +311,7 @@
 
 
 
-
-<style>
-  /* Mobile Responsive Styles */
-@media (max-width: 768px) {
-  .main-cards {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .card {
-    padding: 12px;
-  }
-
-  .card h3 {
-    font-size: 14px;
-  }
-
-  .card h1 {
-    font-size: 20px;
-  }
-
-  .material-icons-outlined {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-cards {
-    grid-template-columns: 1fr; /* Stack the cards vertically on small screens */
-    gap: 8px;
-    padding: 5px;
-  }
-
-  .card {
-    padding: 8px;
-  }
-
-  .card h3 {
-    font-size: 12px;
-  }
-
-  .card h1 {
-    font-size: 18px;
-  }
-
-  .material-icons-outlined {
-    font-size: 24px;
-  }
-}
-
-</style>
-
-
-        <!-- <div class="main-cards">
-
-          <div class="card" sty>
-            <div class="card-inner">
-              <h3> Available To Withdraw</h3>
-              <span class="material-icons-outlined">account_balance_wallet</span>
-            </div>
-            <h1>$ 0</h1>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <h3>Yesterday</h3>
-              <span class="material-icons-outlined">paid</span>
-            </div>
-            <h1>$0</h1>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <h3>Current Month </h3>
-              <span class="material-icons-outlined">groups</span>
-            </div>
-            <h1>$0</h1>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <h3>30 Days</h3>
-              <span class="material-icons-outlined">notification_important</span>
-            </div>
-            <h1>$0</h1>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <h3>$Total</h3>
-              <span class="material-icons-outlined">notification_important</span>
-            </div>
-            <h1>$-0.565</h1>
-          </div>
-
-        </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-
-        .menu-container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          gap: 10px; /* Optional spacing */
-          padding: 20px;
-          background-color: #f9f9f9;
-      }
-
-      .menu-item {
-          flex: 1 1 calc(20% - 10px); /* Five items per row on desktop */
-          max-width: calc(20% - 10px); /* Ensures proper alignment */
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 20px;
-          border: 1px solid #ddd;
-          background-color: #fff;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .menu-item svg {
-          width: 80px;
-          height: 80px;
-          fill: #bb030b; /* SVG color */
-          margin-bottom: 10px;
-      }
-
-      .menu-item-title {
-          font-size: 18px;
-          font-weight: bold;
-          margin-bottom: 8px;
-          color: #333;
-      }
-
-      .menu-item-desc {
-          font-size: 14px;
-          color: #666;
-      }
-
-      @media (max-width: 768px) {
-          .menu-item {
-              flex: 1 1 100%; /* Full width on mobile */
-              max-width: 100%;
-          }
-      }
-
-
-
-
-
-        </style>
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<main class="main-container">
 
 
 <br>
@@ -528,527 +320,254 @@
 
 
 
-<!-- 
 
+
+
+
+
+<h1 style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin: 10px 0; color: #333; margin-left: 5px;">
+  User: <span style="color: rgb(2, 178, 130);">Anvar</span>
+</h1>
+
+<!-- Mobile responsiveness -->
 <style>
-@media only screen and (max-width: 768px) {
-    #mobile_id {
-      display: block; /* Show mobile layout */
-    }
-    #windows_id {
-      display: none; /* Hide Windows layout */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
     }
   }
 
-  /* Target devices with minimum width of 1024px (Windows-like devices) */
-  @media only screen and (min-width: 1024px) {
-    #windows_id {
-      display: block; /* Show Windows layout */
-    }
-    #mobile_id {
-      display: none; /* Hide Mobile layout */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.2rem;
     }
   }
-</style> -->
+</style>
+
+<!-- Google Font for 'Poppins' -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 
 
- 
 
 
 
 
 
-
-  <style>
-    .containerr {
-      display: flex;
-      flex-direction: column; /* Stack vertically by default (mobile view) */
-      gap: 15px;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 400px;
-    }
-  
-    /* Desktop view with larger screen (like Windows) */
-    @media (min-width: 1024px) {
-      .containerr {
-        flex-direction: row; /* Align items in a row for desktop view */
-        justify-content: space-between;
-        align-items: center;
-      }
-  
-      /* Space between form groups for desktop */
-      .form-group {
-        margin-right: 15px;
-      }
-  
-      /* Space between the button and the last form group */
-      .apply-btn {
-        margin-left: 15px;
-      }
-    }
-  
-    input:focus,
-    select:focus {
-      border-color: rgb(2, 178, 130); /* Green border on focus */
-    }
-  
-    /* Customizing the selected option */
-    select option:checked {
-      background-color: rgb(2, 178, 130); /* Green background when selected */
-      color: white; /* White text for selected option */
-    }
-  </style>
-  
-  <div class="containerr">
-    <!-- Start Date Input Field -->
-    <div class="form-group" style="display: flex; flex-direction: column;">
-      <label for="time-interval" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Currency</label>
-      <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
-        <option value="7 days">INR</option>
-        <option value="1 month">USD</option>
-      </select>
-    </div>
-  
-    <!-- Time Interval Dropdown -->
-    <div class="form-group" style="display: flex; flex-direction: column;">
-      <label for="time-interval" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Time Interval</label>
-      <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
-        <option value="7 days">Exact period</option>
-        <option value="1 month">Today</option>
-        <option value="6 months">Yesterday</option>
-        <option value="1 year">Current month</option>
-        <option value="1 year">Last month</option>
-        <option value="1 year">Current year</option>
-        <option value="1 year">Last year</option>
-      </select>
-    </div>
-  
-    <!-- Currency Dropdown -->
-    <!-- <div class="form-group" style="display: flex; flex-direction: column;">
-      <label for="currency" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Language</label>
-      <select id="currency" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
-        <option value="USD">English</option>
-
-      </select>
-    </div> -->
-    <style>
-      .date-input-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+  <!-- First Box -->
+  <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <h3 style="margin-bottom: 15px; color: #333;">Contact Details</h3>
     
-      .date-input {
-        display: flex;
-        align-items: center;
-        background-color: #ffffff;
-        border: 1px solid #d9d9d9;
-        border-radius: 5px;
-        padding: 0.5em;
-        font-family: Arial, sans-serif;
-      }
-    
-      .calendar-icon {
-        margin-right: 0.5em;
-        font-size: 1.2em;
-        color: #a0a0a0;
-      }
-    
-      .start-date,
-      .end-date {
-        border: none;
-        outline: none;
-        background: none;
-        font-size: 1em;
-        color: #a0a0a0;
-        width: 140px;
-      }
-    
-      .arrow {
-        margin: 0 0.5em;
-        font-size: 1.2em;
-        color: #a0a0a0;
-      }
-    
-      input[type="date"]::-webkit-calendar-picker-indicator {
-        opacity: 0;
-      }
 
-    .DateRangePickerInput_calendarIcon_svg {
-    fill: rgb(130, 136, 138);
-    height: 15px;
-    width: 14px;
-    vertical-align: middle;
-}
-.date-input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    <form>
+      <div style="margin-bottom: 20px;">
+        <label for="firstName" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">First name *</label>
+        <input type="text" id="firstName" placeholder="Anvar" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" required />
+      </div>
+  
+      <div style="margin-bottom: 20px;">
+        <label for="lastName" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Last name *</label>
+        <input type="text" id="lastName" placeholder="Rs" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" required />
+      </div>
+  
+      <div style="margin-bottom: 20px;">
+        <label for="phoneNumber" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Phone number</label>
+        <input type="text" id="phoneNumber" placeholder="+919745250848" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" />
+      </div>
+  
+      <div style="margin-bottom: 20px;">
+        <label for="messenger" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Messenger</label>
+        <select id="messenger" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+          <option>Other</option>
+        </select>
+      </div>
+  
+      <div style="margin-bottom: 20px;">
+        <label for="messengerUsername" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Messenger username</label>
+        <input type="text" id="messengerUsername" placeholder="@emilia_wheel" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" />
+      </div>
+  
+      <div style="margin-bottom: 20px;">
+        <label for="country" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Country</label>
+        <select id="country" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+        </select>
+      </div>
+  
+      <div style="margin-bottom: 20px;">
+        <label for="language" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Notification Language</label>
+        <select id="language" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+          <option>English</option>
+          <option>Spanish</option>
+          <option>French</option>
+        </select>
+      </div>
+  
+      <div style="text-align: center;">
+        <button type="submit" style="padding: 12px 20px; background-color: #2ab7a1; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; width: 100%; transition: background-color 0.3s ease;">
+          Save Changes
+        </button>
+      </div>
+    </form>
 
-.date-input {
-  display: flex;
-  align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #d9d9d9;
-  border-radius: 5px;
-  padding: 0.5em;
-  font-family: Arial, sans-serif;
-  position: relative; /* Added relative positioning for stacking context */
-}
-
-.calendar-icon {
-  margin-right: 0.5em;
-  font-size: 1.2em;
-  color: #a0a0a0;
-  pointer-events: none; /* Prevents interfering with clicks */
-}
-
-.start-date,
-.end-date {
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1em;
-  color: #a0a0a0;
-  width: 130px;
-  z-index: 1; /* Ensures that the input is above other elements */
-  pointer-events: auto; /* Ensures the input is clickable */
-}
-
-.arrow {
-  margin: 0 0.5em;
-  font-size: 1.2em;
-  color: #a0a0a0;
-  pointer-events: none; /* Prevents interfering with clicks */
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-
-.DateRangePickerInput_calendarIcon_svg {
-  fill: rgb(130, 136, 138);
-  height: 15px;
-  width: 14px;
-  vertical-align: middle;
-}
-
-    </style>
-
-
-<div class="form-group" style="display: flex; flex-direction: column;">
-  <div class="date-input-container">
-    <div class="date-input">
-      <span class="calendar-icon">
-        <svg class="DateRangePickerInput_calendarIcon_svg DateRangePickerInput_calendarIcon_svg_1" focusable="false" viewBox="0 0 1393.1 1500"><path d="m107 1393h241v-241h-241zm295 0h268v-241h-268zm-295-295h241v-268h-241zm295 0h268v-268h-268zm-295-321h241v-241h-241zm616 616h268v-241h-268zm-321-616h268v-241h-268zm643 616h241v-241h-241zm-322-295h268v-268h-268zm-294-723v-241c0-7-3-14-8-19-6-5-12-8-19-8h-54c-7 0-13 3-19 8-5 5-8 12-8 19v241c0 7 3 14 8 19 6 5 12 8 19 8h54c7 0 13-3 19-8 5-5 8-12 8-19zm616 723h241v-268h-241zm-322-321h268v-241h-268zm322 0h241v-241h-241zm27-402v-241c0-7-3-14-8-19-6-5-12-8-19-8h-54c-7 0-13 3-19 8-5 5-8 12-8 19v241c0 7 3 14 8 19 6 5 12 8 19 8h54c7 0 13-3 19-8 5-5 8-12 8-19zm321-54v1072c0 29-11 54-32 75s-46 32-75 32h-1179c-29 0-54-11-75-32s-32-46-32-75v-1072c0-29 11-54 32-75s46-32 75-32h107v-80c0-37 13-68 40-95s57-39 94-39h54c37 0 68 13 95 39 26 26 39 58 39 95v80h321v-80c0-37 13-69 40-95 26-26 57-39 94-39h54c37 0 68 13 94 39s40 58 40 95v80h107c29 0 54 11 75 32s32 46 32 75z"></path></svg>
-
-      </span>
-      <input type="date" class="start-date" id="startDate" placeholder="Start" />
-      <span class="arrow">→</span>
-      <input type="date" class="end-date" id="endDate" placeholder="End" />
-    </div>
   </div>
+
+  <!-- Second Box -->
+  <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <h3 style="margin-bottom: 15px; color: #333;">Payment Details</h3>
+
+
+    <div style="margin-bottom: 20px;">
+      <label for="player_account" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Preferred payment method</label>
+      <select id="player_account" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+        <option>player account</option>
+      </select>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label for="10649857" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">User account</label>
+      <select id="10649857" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+        <option>1034375386</option>
+      </select>
+    </div>
+
+    <h6 style="margin-bottom: 15px; color: #333;">*To change your payment details, please contact Partner support</h6>
+  </div>
+
+  <!-- Third Box -->
+  <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <h3 style="margin-bottom: 15px; color: #333;">Change Password</h3>
+    <div style="margin-bottom: 20px;">
+      <label for="Old_pass" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Old password</label>
+      <input type="password" id="Old_pass" placeholder="Enter your old password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #fff; color: #333; transition: border-color 0.3s ease;" required />
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <label for="New_Pass" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">New password</label>
+      <input type="password" id="New_Pass" placeholder="Enter a new password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #fff; color: #333; transition: border-color 0.3s ease;" required />
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <label for="repeat" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Repeat new password</label>
+      <input type="password" id="repeat" placeholder="Repeat the new password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #fff; color: #333; transition: border-color 0.3s ease;" required />
+    </div>
+    
+    <div style="text-align: center;">
+      <button type="submit" style="padding: 12px 20px; background-color: #2ab7a1; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; width: 100%; transition: background-color 0.3s ease;">
+        Change Password
+      </button>
+    </div>
+    
+
+  </div>
+
+
+
+
+
+  <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <h3 style="margin-bottom: 15px; color: #333;">Subscriptions</h3>
+    
+    <form style="display: flex; flex-direction: column; gap: 15px;">
+      <label style="font-size: 1rem; color: #555;">
+        <input type="checkbox" style="margin-right: 10px;" /> Company news
+      </label>
+      
+      <label style="font-size: 1rem; color: #555;">
+        <input type="checkbox" style="margin-right: 10px;" /> Affiliate program news
+      </label>
+      
+      <label style="font-size: 1rem; color: #555;">
+        <input type="checkbox" style="margin-right: 10px;" /> Promotions and promo materials
+      </label>
+      
+      <label style="font-size: 1rem; color: #555;">
+        <input type="checkbox" style="margin-right: 10px;" /> Training materials
+      </label>
+      
+      <label style="font-size: 1rem; color: #555;">
+        <input type="checkbox" style="margin-right: 10px;" /> New domain alerts
+      </label>
+      
+      <label style="font-size: 1rem; color: #555;">
+        <input type="checkbox" style="margin-right: 10px;" /> Sports promotions
+      </label>
+      
+      <label style="font-size: 1rem; color: #555;">
+        <input type="checkbox" style="margin-right: 10px;" /> Casino promotions
+      </label>
+      
+      <div style="text-align: center; margin-top: 20px;">
+        <button type="submit" style="padding: 12px 20px; background-color: #2ab7a1; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; width: 100%; transition: background-color 0.3s ease;">
+          Confirm
+        </button>
+      </div>
+    </form>
+  </div>
+  
 </div>
 
+<!-- Mobile responsiveness -->
+<style>
+  @media (max-width: 768px) {
+    div[style*="display: flex"] {
+      flex-direction: column;
+    }
+    div[style*="flex: 1 1 30%"] {
+      flex: 1 1 100%;
+    }
+  }
+</style>
 
- 
 
 
-  
-    <!-- Apply Button -->
-    <button class="apply-btn" style="background-color: rgb(2, 178, 130); color: white; font-size: 16px; font-weight: bold; padding: 12px; border: none; border-radius: 4px; cursor: pointer; text-align: center; transition: background-color 0.3s;">Generate Report </button>
-  </div>
-  
-  
-  
-  
-  <br>
-  <br>
-  
-  
-    <script>
-  document.querySelectorAll('input[type="date"]').forEach((input) => {
-    input.addEventListener('input', () => {
-      if (input.value) {
-        input.style.color = "#000"; // Change color when a date is selected
-      } else {
-        input.style.color = "#a0a0a0"; // Placeholder color
-      }
-    });
-  });
-</script>
 
-  
-  
-  <div style="font-family: Arial, sans-serif; width: 90%; max-width: 800px; margin: auto; border: 1px solid #c3c3c3; border-radius: 8px; overflow: hidden; background: #fff;">
-    <!-- Tabs -->
-    <div style="display: flex; background: #f5f5f5; border-bottom: 2px solid #ddd;">
-      <div onclick="showTab('added-websites')" id="tab-added" style="flex: 1; text-align: center; padding: 8px; font-size: 12px; cursor: pointer; font-weight: bold; background: #222; color: #fff;">REQUEST STATUS</div>
-      <div onclick="showTab('hidden-websites')" id="tab-hidden" style="flex: 1; text-align: center; padding: 8px; font-size: 12px; cursor: pointer; font-weight: bold;">PAYMENT HISTORY</div>
+
+
+
+<br>
+<br>
+
+
+
+
+  <footer style="background-color: rgb(44, 52, 58); color: rgb(255, 255, 255); padding: 25px 10px; font-size: 13px; flex: 0 0 auto; width:100%;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <p style="text-align: center; margin: 0;">
+        20BETS Partners uses cookies to enhance your website experience. By continuing to browse the 20BETS Partners website, you consent to the use of these cookies. 
+        <a href="/cookies" style="color: rgb(255, 255, 255); text-decoration: none;">Find out more</a>
+      </p>
     </div>
-  
-    <!-- ADDED WEBSITES Content -->
-    <div id="added-websites" style="padding: 8px; display: block;">
-      <div style="display: block; align-items: center; margin-bottom: 10px;">
-        <select 
-          style="
-            margin-left: auto; 
-            padding: 6px; 
-            border: 2px solid #ddd; 
-            border-radius: 6px; 
-            font-size: 12px; 
-            font-family: Arial, sans-serif; 
-            background-color: #f9f9f9; 
-            color: #333; 
-            cursor: pointer; 
-            transition: all 0.3s ease-in-out;"
-          onfocus="this.style.backgroundColor='#222'; this.style.color='#fff';"
-          onblur="this.style.backgroundColor='#f9f9f9'; this.style.color='#333';"
-        >
-          <option>6 items Selected</option>
-          <option>Currency</option>
-          <option>Date</option>
-          <option>Payout</option>
-          <option>Revenue</option>
-          <option>Balance</option>
-          <option>Status</option>
-        </select>
-      </div>
-      <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 12px;">
-        <thead>
-          <tr style="background: #222; color: #fff;">
-            <th style="text-align: center; padding: 8px; border: 1px solid #ddd;"></th>
-            <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Currency
-              <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 10px; height: 10px; margin-left: 5px;">
-            </th>
-            <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Date
-              <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 10px; height: 10px; margin-left: 5px;">
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">
-              <button onclick="toggleRow(this)" style="width: 25px; height: 25px; background-color: #02b282; color: white; border: none; border-radius: 50%; cursor: pointer; font-weight: bold; font-size: 12px;">+</button>
-            </td>
-            <td style="padding: 8px; border: 1px solid #ddd;">INR</td>
-            <td style="padding: 8px; border: 1px solid #ddd;">02-12-2024</td>
-          </tr>
-          <tr class="subRowWrapper" style="display: none;">
-            <td colspan="3" style="padding: 8px; border: 1px solid #ddd; background: #f9f9f9;">
-              <span style="font-size: 12px; font-weight: bold; color: #333; margin-right: 10px;">Show/Hide</span>
-              <button style="background-color: #bb030b; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 9px !important; transition: 0.3s;">HIDE</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
-        <span>Records from 1 to 1 (1 record in total)</span>
-        <div style="display: flex; align-items: center;">
-          <button style="background: #02b282; color: white; border: none; border-radius: 4px; padding: 5px 8px; cursor: pointer; margin-right: 5px;">&lt;</button>
-          <input type="text" value="1" style="width: 25px; text-align: center; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; padding: 4px;" />
-          <button style="background: #02b282; color: white; border: none; border-radius: 4px; padding: 5px 8px; cursor: pointer; margin-left: 5px;">&gt;</button>
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+      <div style="text-align: center;">
+        <nav style="display: inline-block;">
+          <ul style="list-style-type: none; padding: 0;">
+            <li style="display: inline-block; margin-right: 20px;">
+              <a href="/contacts" style="color: rgb(255, 255, 255); text-decoration: none;">Contacts</a>
+            </li>
+            <li style="display: inline-block; margin-right: 20px;">
+              <a href="/news" style="color: rgb(255, 255, 255); text-decoration: none;">News</a>
+            </li>
+            <li style="display: inline-block; margin-right: 20px;">
+              <a href="/privacy" style="color: rgb(255, 255, 255); text-decoration: none;">Privacy Policy</a>
+            </li>
+            <li style="display: inline-block;">
+              <a href="/cookies" style="color: rgb(255, 255, 255); text-decoration: none;">Cookie Policy</a>
+            </li>
+          </ul>
+        </nav>
+        <div style="color: rgb(255, 255, 255); margin-top: 10px;">
+          Copyright © 2023-2024 "20BETS Partners". All rights reserved.
         </div>
       </div>
-      <select 
-        style="
-          margin-left: auto; 
-          padding: 6px; 
-          border: 2px solid #ddd; 
-          border-radius: 6px; 
-          font-size: 12px; 
-          font-family: Arial, sans-serif; 
-          background-color: #f9f9f9; 
-          color: #333; 
-          cursor: pointer; 
-          transition: all 0.3s ease-in-out;"
-        onfocus="this.style.backgroundColor='#222'; this.style.color='#fff';"
-        onblur="this.style.backgroundColor='#f9f9f9'; this.style.color='#333';"
-      >
-        <option>5</option>
-        <option>10</option>
-        <option>20</option>
-        <option>25</option>
-        <option>50</option>
-        <option>100</option>
-      </select>
     </div>
-  
-    <!-- HIDDEN WEBSITES Content -->
-    <div id="hidden-websites" style="padding: 8px; display: none;">
-      <div style="display: block; align-items: center; margin-bottom: 10px;">
-        <select 
-          style="
-            margin-left: auto; 
-            padding: 6px; 
-            border: 2px solid #ddd; 
-            border-radius: 6px; 
-            font-size: 12px; 
-            font-family: Arial, sans-serif; 
-            background-color: #f9f9f9; 
-            color: #333; 
-            cursor: pointer; 
-            transition: all 0.3s ease-in-out;"
-          onfocus="this.style.backgroundColor='#222'; this.style.color='#fff';"
-          onblur="this.style.backgroundColor='#f9f9f9'; this.style.color='#333';"
-        >
-          <option>3 items Selected</option>
-          <option>ID</option>
-          <option>Website</option>
-          <option>Show/Hide</option>
-        </select>
-      </div>
-      <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 12px;">
-        <thead>
-          <tr style="background: #222; color: #fff;">
-            <th style="text-align: center; padding: 8px; border: 1px solid #ddd;"></th>
-            <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">ID
-              <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 10px; height: 10px; margin-left: 5px;">
-            </th>
-            <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Website
-              <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 10px; height: 10px; margin-left: 5px;">
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">
-              <button onclick="toggleRow(this)" style="width: 25px; height: 25px; background-color: #02b282; color: white; border: none; border-radius: 50%; cursor: pointer; font-weight: bold; font-size: 12px;">+</button>
-            </td>
-            <td style="padding: 8px; border: 1px solid #ddd;">45Hidden</td>
-            <td style="padding: 8px; border: 1px solid #ddd;">https://t.me/Hidden-Website</td>
-          </tr>
-          <tr class="subRowWrapper" style="display: none;">
-            <td colspan="3" style="padding: 8px; border: 1px solid #ddd; background: #f9f9f9;">
-              <span style="font-size: 12px; font-weight: bold; color: #333; margin-right: 10px;">Show/Hide</span>
-              <button style="background-color: #bb030b; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 9px !important; transition: 0.3s;">SHOW</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
-        <span>Records from 1 to 1 (1 record in total)</span>
-        <div style="display: flex; align-items: center;">
-          <button style="background: #02b282; color: white; border: none; border-radius: 4px; padding: 5px 8px; cursor: pointer; margin-right: 5px;">&lt;</button>
-          <input type="text" value="1" style="width: 25px; text-align: center; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; padding: 4px;" />
-          <button style="background: #02b282; color: white; border: none; border-radius: 4px; padding: 5px 8px; cursor: pointer; margin-left: 5px;">&gt;</button>
-        </div>
-      </div>
-      <select 
-        style="
-          margin-left: auto; 
-          padding: 6px; 
-          border: 2px solid #ddd; 
-          border-radius: 6px; 
-          font-size: 12px; 
-          font-family: Arial, sans-serif; 
-          background-color: #f9f9f9; 
-          color: #333; 
-          cursor: pointer; 
-          transition: all 0.3s ease-in-out;"
-        onfocus="this.style.backgroundColor='#222'; this.style.color='#fff';"
-        onblur="this.style.backgroundColor='#f9f9f9'; this.style.color='#333';"
-      >
-        <option>5</option>
-        <option>10</option>
-        <option>20</option>
-        <option>25</option>
-        <option>50</option>
-        <option>100</option>
-      </select>
-    </div>
-  </div>
-  
-  <script>
-    function toggleRow(button) {
-      const subRow = button.parentElement.parentElement.nextElementSibling;
-      if (subRow.style.display === "none" || subRow.style.display === "") {
-        subRow.style.display = "table-row";
-        button.textContent = "-";
-      } else {
-        subRow.style.display = "none";
-        button.textContent = "+";
-      }
-    }
-  
-    function showTab(tabId) {
-      document.getElementById("added-websites").style.display = tabId === "added-websites" ? "block" : "none";
-      document.getElementById("hidden-websites").style.display = tabId === "hidden-websites" ? "block" : "none";
-      document.getElementById("tab-added").style.background = tabId === "added-websites" ? "#222" : "#f5f5f5";
-      document.getElementById("tab-added").style.color = tabId === "added-websites" ? "#fff" : "#333";
-      document.getElementById("tab-hidden").style.background = tabId === "hidden-websites" ? "#222" : "#f5f5f5";
-      document.getElementById("tab-hidden").style.color = tabId === "hidden-websites" ? "#fff" : "#333";
-    }
-  </script>
-  
-  
-  
-  
-  <br>
-  <br>
-  <br>
+  </footer>
   
 
-
-
-  <div class="wrapper" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; padding: 20px;">
-    <div class="box" style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); flex: 1; min-width: 250px; border: 1px solid rgb(232, 232, 232);">
-      <p style="margin: 10px 0; font-size: 16px; color: #333;">To receive payment, please contact your manager. This will not be necessary every time; automatic payment will be set up.</p>
-      <p style="margin: 10px 0; font-size: 16px; color: #333;">The minimum payout amount is $30 per week</p>
-    </div>
-    <div class="box" style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); flex: 1; min-width: 250px; border: 1px solid rgb(232, 232, 232);">
-      <p style="margin: 10px 0; font-size: 16px; color: #333;">You can contact our managers using their  <a href="https://affiliate-program-website.com/contact" style="color: rgb(2, 178, 130); text-decoration: none; font-weight: bold;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">contact details </a>, available on the Affiliate Program website.</p>
-    </div>
-  </div>
-  
-
-
-
-
-        
-
-        <footer style="background-color: rgb(44, 52, 58); color: rgb(159, 168, 188); padding: 25px 10px; font-size: 13px; flex: 0 0 auto; width:100%;">
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <p style="text-align: center; margin: 0;">
-              20BETS Partners uses cookies to enhance your website experience. By continuing to browse the 20BETS Partners website, you consent to the use of these cookies. <br>
-              <a href="/cookies" style="color: rgb(2, 178, 130); text-decoration: none;">Find out more</a>
-            </p>
-          </div>
-          <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-            <div style="text-align: center;">
-              <nav style="display: inline-block;">
-                <ul style="list-style-type: none; padding: 0;">
-                  <li style="display: inline-block; margin-right: 20px;">
-                    <a href="/contacts" style="color: rgb(255, 255, 255); text-decoration: none;">Contacts</a>
-                  </li>
-                  <li style="display: inline-block; margin-right: 20px;">
-                    <a href="/news" style="color: rgb(255, 255, 255); text-decoration: none;">News</a>
-                  </li>
-                  <li style="display: inline-block; margin-right: 20px;">
-                    <a href="/privacy" style="color: rgb(255, 255, 255); text-decoration: none;">Privacy Policy</a>
-                  </li>
-                  <li style="display: inline-block;">
-                    <a href="/cookies" style="color: rgb(255, 255, 255); text-decoration: none;">Cookie Policy</a>
-                  </li>
-                </ul>
-              </nav>
-              <div style="color: rgb(159, 168, 188); margin-top: 10px;">
-                Copyright © 2023-2024 20BETS Partners. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </footer>
-        
-      </main>
-      <!-- End Main -->
-
-
+</main>
 
 
       
