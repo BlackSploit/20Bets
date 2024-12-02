@@ -27,7 +27,22 @@
         <div class="menu-icon" onclick="openSidebar()">
           <span class="material-icons-outlined">menu</span>
         </div>
-        <div class="header-left">
+
+
+        <style>
+          #mobileee {
+          display: block;
+        }
+        
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+          #mobileee {
+            display: none !important;
+          }
+        }
+        </style>
+
+        <div class="header-left" id="mobileee">
           
           <button style="
           text-align: center; 
