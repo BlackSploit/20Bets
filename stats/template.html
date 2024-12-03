@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>20Bets Partners</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <style>
+      body{
+        font-family: 'Futura Cyrillic Book' ,Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header" style="background-color: rgb(28, 27, 27);">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+
+
+
+
+        <style>
+          #mobileee {
+          display: block;
+        }
+        
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+          #mobileee {
+            display: none !important;
+          }
+        }
+        </style>
+        <div class="header-left" id="mobileee">
+          
+          <button style="
+          text-align: center; 
+          padding: 0.5em 1em; 
+          border-width: 1px; 
+          border-style: solid; 
+          text-transform: uppercase; 
+          border-radius: 5px; 
+          border-color: rgb(46, 46, 46); 
+          background-color: rgb(2, 178, 130); 
+          transition: 0.3s; 
+          font-size: 0.875em; 
+          line-height: 16.1px; 
+          color: rgb(30, 30, 30); /* Black text color */
+          font-family: Arial, sans-serif; 
+          font-weight: bold; 
+          letter-spacing: 0.5px; 
+          display: inline-flex; 
+          align-items: center; 
+          cursor: pointer;
+          white-space: nowrap; /* Ensures text stays on one line */
+        "
+        aria-hidden="true" focusable="false">
+          <svg viewBox="0 0 512 512" height="14" width="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 5px;">
+            <path fill="currentColor" d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"></path>
+          </svg>
+          Refresh Statistics
+        </button>
+        
+        <style>
+          /* Responsive styling for mobile devices */
+          @media (max-width: 600px) {
+            button {
+              padding: 0.4em 0.6em;
+              font-size: 0.5em !important; /* Smaller font size */
+              line-height: 1.2; /* Adjusted line height */
+              white-space: nowrap; /* Ensure text fits in one line */
+            }
+            button svg {
+              height: 10px; /* Smaller icon size */
+              width: 10px;
+              margin-right: 3px;
+            }
+          }
+        </style>
+        
+
+          
+          
+        </div>
+      
+
+
+
+
+
+
+        <div class="header-right" style="position: relative;">
+          <span onclick="toggleDropdown()" style="cursor: pointer;">
+            <!-- SVG icon instead of account_circle -->
+            <svg viewBox="0 0 496 512" height="26" width="26" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
+              <path fill="#ffffff" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path>
+            </svg>
+            
+          </span>
+          <span onclick="toggleDropdown()" style="cursor: pointer; color: white;"> 
+            <!-- <svg viewBox="0 0 512 512" height="15" width="15" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 0 0 0 34L157.67 377a24 24 0 0 0 34 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z"></path></svg> -->
+          </span>
+          
+          
+          <!-- Dropdown menu -->
+          <div id="dropdownMenu" style="
+            display: none; 
+            position: absolute; 
+            top: 100%; 
+            right: 0; 
+            background-color: #333; 
+            color: #fff; 
+            width: 180px; 
+            border-radius: 5px; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+            padding: 10px;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+            opacity: 0;">
+            
+            <div style="padding: 10px; font-size: 0.875em; color: #bbb;"><svg viewBox="0 0 496 512" height="26" width="26" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
+              <path fill="#ffffff" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path>
+            </svg> &nbsp; &nbsp;&nbsp; Aff. ID: 1678</div>
+            <hr style="border: 0.5px solid #444;">
+            <a href="#" style="
+              display: block; 
+              padding: 10px; 
+              color: rgb(230, 229, 229); 
+              text-decoration: none; 
+              font-weight: 500;
+              text-align: left;
+              transition: background 0.3s;
+              border-radius: 4px;">
+             <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </div>
+        </div>
+        
+        <script>
+          function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            if (dropdown.style.display === "none" || dropdown.style.opacity === "0") {
+              dropdown.style.display = "block";
+              setTimeout(() => { dropdown.style.opacity = "1"; }, 10); // Smooth transition
+            } else {
+              dropdown.style.opacity = "0";
+              setTimeout(() => { dropdown.style.display = "none"; }, 300);
+            }
+          }
+        
+          // Close dropdown if clicked outside
+          window.addEventListener("click", function(event) {
+            const dropdown = document.getElementById("dropdownMenu");
+            if (!event.target.closest(".header-right")) {
+              dropdown.style.opacity = "0";
+              setTimeout(() => { dropdown.style.display = "none"; }, 300);
+            }
+          });
+        </script>
+
+
+
+
+
+
+      </header>
+      <!-- End Header -->
+<style>
+  #sidebar {
+  width: 250px;
+  /* Other styles for sidebar */
+}
+@media (max-width: 600px) {
+            #sidebar {
+    display: none;
+    grid-area: sidebar;
+    height: 100%;
+    width: 250px;
+    background-color: rgb(63, 69, 73);
+    overflow-y: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    position: fixed; /* Fixed position for the sidebar */
+    top: 0; /* Align to the top */
+    right: 0; /* Position it on the right side */
+    z-index: 12;
+}
+
+/* Updated sidebar-responsive class */
+.sidebar-responsive {
+    display: inline !important;
+    position: fixed; 
+    top: 0;
+    right: 0;
+    z-index: 12 !important;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(63, 69, 73);
+    transition: all 0.5s;
+
+}
+
+/* Add overlay background when sidebar is active */
+body.sidebar-active {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Dark background */
+}
+
+
+          }
+          
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: rgb(63, 69, 73)
+  color: white;
+  
+}
+
+.sidebar-heading {
+  background-color: rgb(41, 41, 41);
+  color: white;
+  padding: 10px;
+  margin: 0;
+  font-size: 1em;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list-item {
+  padding: 10px 15px;
+}
+
+
+.sidebar-list-item a:hover {
+  color: #007bff;
+}
+
+.material-icons-outlined {
+  margin-right: 8px;
+}
+
+</style>
+         <!-- Sidebar -->
+<aside id="sidebar">
+  <div class="sidebar-title" style="background-color: rgb(28, 27, 27) !important; border-left: 1px solid #333;">
+    <div class="sidebar-brand">
+      <!-- <span class="material-icons-outlined"></span>  -->
+      <img src="./images/1733058129438 (1).png" alt="Logo" style="max-width: 100px; height: 70%; padding: 10px 0; display: block; margin: 0 auto;">
+    </div>
+    <!-- <span class="material-icons-outlined" onclick="closeSidebar()">close</span> -->
+    <div onclick="closeSidebar()" style="position: absolute; top: 22px; right: 20px; cursor: pointer; z-index: 10;">
+      <svg viewBox="0 0 352 512" height="30" width="30" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
+          <path fill="currentColor" d="m242.72 256 100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+      </svg>
+  </div>
+  
+  </div>
+<style>
+  .sidebar-list-item{
+    border-top: 1px solid rgb(28, 27, 27);
+    padding: 15px;
+  }
+</style>
+  <h2 class="sidebar-heading" style="background-color: rgb(28, 27, 27) !important; border-top:1px solid #333">MAIN MENU</h2>
+ 
+</aside>
+
+
+      <!-- Main -->
+      <main class="main-container" >
+        <div class="main-title">
+          <br>
+          <!-- <h2>Main Page</h2> -->
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        <footer style="background-color: rgb(44, 52, 58); color: rgb(159, 168, 188); padding: 25px 10px; font-size: 13px; flex: 0 0 auto; width:100%;">
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <p style="text-align: center; margin: 0;">
+              20BETS Partners uses cookies to enhance your website experience. By continuing to browse the 20BETS Partners website, you consent to the use of these cookies. <br>
+              <a href="/cookies" style="color: rgb(2, 178, 130); text-decoration: none;">Find out more</a>
+            </p>
+          </div>
+          <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+            <div style="text-align: center;">
+              <nav style="display: inline-block;">
+                <ul style="list-style-type: none; padding: 0;">
+                  <li style="display: inline-block; margin-right: 20px;">
+                    <a href="/contacts" style="color: rgb(255, 255, 255); text-decoration: none;">Contacts</a>
+                  </li>
+                  <li style="display: inline-block; margin-right: 20px;">
+                    <a href="/news" style="color: rgb(255, 255, 255); text-decoration: none;">News</a>
+                  </li>
+                  <li style="display: inline-block; margin-right: 20px;">
+                    <a href="/privacy" style="color: rgb(255, 255, 255); text-decoration: none;">Privacy Policy</a>
+                  </li>
+                  <li style="display: inline-block;">
+                    <a href="/cookies" style="color: rgb(255, 255, 255); text-decoration: none;">Cookie Policy</a>
+                  </li>
+                </ul>
+              </nav>
+              <div style="color: rgb(159, 168, 188); margin-top: 10px;">
+                Copyright © 2023-2024 20BETS Partners. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+    <script>
+        // Function to toggle sidebar responsiveness and change main container background color
+        function toggleSidebar() {
+          const sidebar = document.getElementById('sidebar');
+          const mainContainer = document.querySelector('.main-container');
+      
+          // Toggle sidebar-responsive class
+          sidebar.classList.toggle('sidebar-responsive');
+      
+          // Check if the sidebar has the sidebar-responsive class
+          if (sidebar.classList.contains('sidebar-responsive')) {
+            // Add black background to main-container
+            mainContainer.style.backgroundColor = 'black';
+          } else {
+            // Remove black background from main-container
+            mainContainer.style.backgroundColor = '';
+          }
+        }
+      
+        // Optional: Event listener for toggling the sidebar on clicking the menu icon
+        document.querySelector('.menu-icon').addEventListener('click', toggleSidebar);
+      </script>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
