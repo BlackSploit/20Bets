@@ -172,7 +172,8 @@ body {
 }
 
 .charts-card {
-  background-color: #212121;
+  background-color: rgb(253, 253, 253);
+  border: 1px solid rgb(178, 178, 178)
   margin-bottom: 20px;
   padding: 25px;
   box-sizing: border-box;
@@ -296,3 +297,9 @@ body {
 body > div > header > div.header-right{
   font-size: 15px;
 }
+
+
+.apexcharts-legend-text{
+  color: rgb(100,100,100) !important;
+}
+

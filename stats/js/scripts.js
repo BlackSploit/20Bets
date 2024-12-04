@@ -97,7 +97,7 @@ const barChartOptions = {
     },
     labels: {
       style: {
-        colors: '#f5f7ff',
+        colors: '#000000',
       },
     },
   },
@@ -118,7 +118,7 @@ const barChartOptions = {
     },
     labels: {
       style: {
-        colors: '#f5f7ff',
+        colors: '#000000',
       },
     },
   },
@@ -154,7 +154,7 @@ const areaChartOptions = {
   colors: ['#00ab57', '#d50000'],
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
   dataLabels: {
-    enabled: false,
+    enabled: true,
   },
   fill: {
     gradient: {
@@ -181,7 +181,7 @@ const areaChartOptions = {
   },
   legend: {
     labels: {
-      colors: '#f5f7ff',
+      colors: '#000000',
     },
     show: true,
     position: 'top',
