@@ -237,7 +237,7 @@ body.sidebar-active {
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  background-color: rgb(63, 69, 73)
+  background-color: rgb(63, 69, 73);
   color: white;
   
 }
@@ -247,7 +247,8 @@ body.sidebar-active {
   color: white;
   padding: 10px;
   margin: 0;
-  font-size: 1em;
+  font-size: 0.7em;
+  font-family: Arial, sans-serif;
 }
 
 .sidebar-list {
@@ -287,7 +288,7 @@ body.sidebar-active {
       <br>
     </div>
     <!-- <span class="material-icons-outlined" onclick="closeSidebar()">close</span> -->
-    <div onclick="closeSidebar()" style="position: absolute; top: 28px; right: 20px; cursor: pointer; z-index: 10; margin-left: 15px;" id="removeOverlayButton">
+    <div onclick="closeSidebar()" style="position: absolute; top: 24px; right: 20px; cursor: pointer; z-index: 10; margin-left: 15px;" id="removeOverlayButton">
       <svg viewBox="0 0 352 512" height="30" width="30" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
           <path fill="currentColor" d="m242.72 256 100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
       </svg>
@@ -592,7 +593,7 @@ body.sidebar-active {
           justify-content: center;
           -webkit-box-align: center;
           align-items: center;
-          height: 10.3em;
+          height: 9em;
           position: relative;
           overflow: hidden;
           z-index: 0;
@@ -624,7 +625,7 @@ body.sidebar-active {
           justify-content: center;
           -webkit-box-align: center;
           align-items: center;
-          height: 10.3em;
+          height: 9em;
           position: relative;
           overflow: hidden;
           z-index: 0;
@@ -688,7 +689,7 @@ body.sidebar-active {
           justify-content: center;
           -webkit-box-align: center;
           align-items: center;
-          height: 10.3em;
+          height: 9em;
           position: relative;
           overflow: hidden;
           z-index: 0;
@@ -755,7 +756,7 @@ body.sidebar-active {
           justify-content: center;
           -webkit-box-align: center;
           align-items: center;
-          height: 10.3em;
+          height: 9em;
           position: relative;
           overflow: hidden;
           z-index: 0;
@@ -790,7 +791,7 @@ body.sidebar-active {
           justify-content: center;
           -webkit-box-align: center;
           align-items: center;
-          height: 10.3em;
+          height: 9em;
           position: relative;
           overflow: hidden;
           z-index: 0;
@@ -823,7 +824,7 @@ body.sidebar-active {
           justify-content: center;
           -webkit-box-align: center;
           align-items: center;
-          height: 10.3em;
+          height: 9em;
           position: relative;
           overflow: hidden;
           z-index: 0;
@@ -986,7 +987,7 @@ body.sidebar-active {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 400px;
+    /* max-width: 400px; */
   }
 
   /* Desktop view with larger screen (like Windows) */
@@ -1149,7 +1150,7 @@ body.sidebar-active {
 </style>
 
 
-<div id="mobile_id" style="font-family: Arial, sans-serif; width: 350px; color: white; background-color: rgb(255, 255, 255); border: 1px solid #c3c3c3; border-radius: 5px; overflow: hidden; margin: auto;">
+<div id="mobile_id" style="font-family: Arial, sans-serif; width: 350px; color: #606060; background-color: rgb(255, 255, 255); border: 1px solid #c3c3c3; border-radius: 5px; overflow: hidden; margin: auto;">
   <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid #444; background-color: #222; background: rgb(28, 27, 27);color: white; font-size: 14px;">
     <span>Stats summary</span>
     <select style="background-color: #444; color: white; border: 1px solid #555; border-radius: 3px; padding: 5px; font-size: 12px; outline: none;">
@@ -1159,47 +1160,165 @@ body.sidebar-active {
       <option>Last month</option>
     </select>
   </div>
-  <div style="padding: 10px;">
-    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 5px; border-bottom: 1px solid #444; font-weight: bold; background-color: #111; font-size: 12px; text-transform: uppercase; position: relative; height: 30px;">
-      <span style="flex: 1; text-align: center; border-left: none;"> </span>
-      <span style="flex: 1; text-align: center; display: flex; align-items: center; justify-content: center;  padding: 0 5px;">Currency
-        <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 12px; height: 12px; margin-left: 5px;">
-      </span>
-      <span style="flex: 1; text-align: center; display: flex; align-items: center; justify-content: center;  padding: 0 5px;">Views
-        <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 12px; height: 12px; margin-left: 5px;">
-      </span>
-      <span style="flex: 1; text-align: center; display: flex; align-items: center; justify-content: center;  padding: 0 5px;">Clicks
-        <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 12px; height: 12px; margin-left: 5px;">
-      </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div id="added-websites" style="padding: 8px; display: block;">
+    <div style="display: block; align-items: center; margin-bottom: 10px;">
+      <select 
+        style="margin-left: auto; padding: 6px; border: 2px solid #ddd; border-radius: 6px; font-size: 12px; font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; cursor: pointer; transition: all 0.3s ease-in-out;"
+        onfocus="this.style.backgroundColor='#222'; this.style.color='#fff';"
+        onblur="this.style.backgroundColor='#f9f9f9'; this.style.color='#333';"
+      >
+        <option>5 items Selected</option>
+        <option>Currency</option>
+        <option>Views</option>
+        <option>Clicks</option>
+        <option>Direct Links</option>
+        <option>Regisration</option>
+        <!-- <option>End Date</option> -->
+      </select>
     </div>
-    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 5px; border-bottom: 1px solid #444;">
-      <button onclick="toggleSubRow(this)" style="width: 30px; height: 30px; background-color: #02b282; color: white; border: none; border-radius: 50%; cursor: pointer; font-weight: bold; font-size: 15px !important; position: relative; top: -4px; left: -4px;">+</button>
-      <span style="color: rgb(32, 32, 32); flex: 1; text-align: center;">USD</span>
-      <span style="color: rgb(32, 32, 32); flex: 1; text-align: center;">0</span>
-      <span style="color: rgb(32, 32, 32); flex: 1; text-align: center;">0</span>
+  
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 12px;">
+      <thead>
+        <tr style="background: #222; color: #fff;">
+          <th style="text-align: center; padding: 8px; border: 1px solid #ddd;"></th>
+          <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Currency
+            <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 10px; height: 10px; margin-left: 5px;">
+          </th>
+          <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Views
+            <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 10px; height: 10px; margin-left: 5px;">
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">
+            <button onclick="toggleRow(this)" style="width: 30px; height: 30px; background-color: #02b282; color: white; border: none; border-radius: 50%; cursor: pointer; font-weight: bold; font-size: 15px !important; position: relative; top: -4px; left: -4px;">+</button>
+
+        </td>
+          <td style="padding: 8px; border: 1px solid #ddd;">USD</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">0</td>
+        </tr>
+  
+        <tr class="subRowWrapper" style="display: none;">
+          <td colspan="3" style="padding: 8px; border: 1px solid #ddd; background: #f9f9f9;">
+            <span style="font-size: 12px; font-weight: bold; color: #333; margin-right: 10px;">Clicks: </span>
+            <button style="background-color: #f9f9f9; color: #333; border: none; padding: 3px 3px; border-radius: 4px; cursor: pointer; font-size: 11px !important; transition: 0.3s;">0</button>
+          </td>
+        </tr>
+        <tr class="subRowWrapper" style="display: none;">
+          <td colspan="3" style="padding: 8px; border: 1px solid #ddd; background: #f9f9f9;">
+            <span style="font-size: 12px; font-weight: bold; color: #333; margin-right: 10px;">Direct Links: </span>
+            <button style="background-color: #f9f9f9; color: #333; border: none; padding: 3px 3px; border-radius: 4px; cursor: pointer; font-size: 11px !important; transition: 0.3s;">1</button>
+          </td>
+        </tr>
+        <tr class="subRowWrapper" style="display: none;">
+          <td colspan="3" style="padding: 8px; border: 1px solid #ddd; background: #f9f9f9;">
+            <span style="font-size: 12px; font-weight: bold; color: #333; margin-right: 10px;">Registration: </span>
+            <button style="background-color: #f9f9f9; color: #333; border: none; padding: 3px 3px; border-radius: 4px; cursor: pointer; font-size: 11px !important; transition: 0.3s;">1</button>
+          </td>
+        </tr>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </tbody>
+    </table>
+  
+    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
+      <span>Records from 1 to 1 (1 record in total)</span>
+      <div style="display: flex; align-items: center;">
+        <button style="background: #02b282; color: white; border: none; border-radius: 4px; padding: 5px 8px; cursor: pointer; margin-right: 5px;">&lt;</button>
+        <input type="text" value="1" style="width: 25px; text-align: center; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; padding: 4px;" />
+        <button style="background: #02b282; color: white; border: none; border-radius: 4px; padding: 5px 8px; cursor: pointer; margin-left: 5px;">&gt;</button>
+      </div>
     </div>
-    <div class="subRowWrapper hidden" style="margin-top: 5px; padding-left: 30px; display: none;">
-      <div style="padding: 8px; background-color: rgb(255, 255, 255); font-size: 12px; color: black; border-bottom: 1px solid #ccc;">
-        <div style="display: flex; justify-content: space-between; padding: 8px 0;">
-          <span style="color: rgb(32, 32, 32); flex: 1;">Clicks:</span>
-          <span style="color: rgb(32, 32, 32); flex: 1; text-align: center;">0</span>
-        </div>
-      </div>
-      <div style="padding: 8px; background-color: rgb(255, 255, 255); font-size: 12px; color: black; border-bottom: 1px solid #ccc;">
-        <div style="display: flex; justify-content: space-between; padding: 8px 0;">
-          <span style="color: rgb(32, 32, 32); flex: 1;">Direct Links:</span>
-          <span style="color: rgb(32, 32, 32); flex: 1; text-align: center;">1</span>
-        </div>
-      </div>
-      <div style="padding: 8px; background-color: rgb(255, 255, 255); font-size: 12px; color: black; border-bottom: 1px solid #ccc;">
-        <div style="display: flex; justify-content: space-between; padding: 8px 0;">
-          <span style="color: rgb(32, 32, 32); flex: 1;">Registrations:</span>
-          <span style="color: rgb(32, 32, 32); flex: 1; text-align: center;">1</span>
-        </div>
-      </div>
-      <!-- Add other sub-row elements as needed -->
-    </div>
+  
+    <select 
+      style="margin-left: auto; padding: 6px; border: 2px solid #ddd; border-radius: 6px; font-size: 12px; font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; cursor: pointer; transition: all 0.3s ease-in-out;"
+      onfocus="this.style.backgroundColor='#222'; this.style.color='#fff';"
+      onblur="this.style.backgroundColor='#f9f9f9'; this.style.color='#333';"
+    >
+      <option>5</option>
+      <option>10</option>
+      <option>20</option>
+      <option>25</option>
+      <option>50</option>
+      <option>100</option>
+    </select>
   </div>
+  
+  <script>
+    function toggleRow(button) {
+      // Find the closest row to the button
+      const currentRow = button.closest('tr');
+      
+      // Find all the sub-rows related to this row (i.e., the rows after the current row)
+      const subRows = [];
+      let nextRow = currentRow.nextElementSibling;
+  
+      // Collect all the sub-rows (subRowWrapper) after the current row
+      while (nextRow && nextRow.classList.contains('subRowWrapper')) {
+        subRows.push(nextRow);
+        nextRow = nextRow.nextElementSibling;
+      }
+  
+      // Toggle the visibility of the sub-rows
+      subRows.forEach(subRow => {
+        if (subRow.style.display === "none" || subRow.style.display === "") {
+          subRow.style.display = "table-row"; // Show sub-row
+        } else {
+          subRow.style.display = "none"; // Hide sub-row
+        }
+      });
+  
+      // Toggle the button text between "+" and "-"
+      if (subRows.length && subRows[0].style.display === "none") {
+        button.textContent = "+"; // Change to "+"
+      } else {
+        button.textContent = "-"; // Change to "-"
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+
+  
 </div>
 
 <script>

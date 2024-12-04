@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>20Bets Partners</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">    <title>20Bets Partners</title>
 
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -24,13 +23,32 @@
 
       <!-- Header -->
       <header class="header" style="background-color: rgb(28, 27, 27);">
-        <img src="./images/1733058129438 (1).png" alt="" srcset="" style="width: 75px; margin-left: -10px;">
+        <img src="./images/1733058129438 (1).png" alt="" srcset="" style="width: 85px; margin-left: -10px;">
         
 
 
-
+        <style>
+          .overlayyy {
+    position: fixed;   /* Fixes the overlay in place */
+    top: 0;
+    left: 0;
+    width: 170px;      /* Full viewport width */
+    height: 100vh;     /* Full viewport height */
+    background: rgba(16, 16, 16, 0.768) !important; /* Semi-transparent background */
+    display: none;   
+    z-index: 1;     /* Ensure it stays on top of other elements */
+  }
+  
+        </style>
+        <div id="overlayyy" class="overlayyy"></div>
+  
 
         <style>
+
+
+
+
+
           #mobileee {
           display: block;
         }
@@ -100,8 +118,8 @@
             
           </span>
 
-          <div class="menu-icon" onclick="openSidebar()" >
-            <span class="material-icons-outlined" style="margin-top: -15px !important;">menu</span>
+          <div class="menu-icon" onclick="openSidebar()" id="overlayButton1">
+            <span class="material-icons-outlined">menu</span>
           </div>
           <span onclick="toggleDropdown()" style="cursor: pointer; color: white;"> 
             <!-- <svg viewBox="0 0 512 512" height="15" width="15" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 0 0 0 34L157.67 377a24 24 0 0 0 34 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z"></path></svg> -->
@@ -175,6 +193,7 @@
   #sidebar {
   width: 250px;
   /* Other styles for sidebar */
+  z-index: 999999;
 }
 @media (max-width: 600px) {
             #sidebar {
@@ -218,7 +237,7 @@ body.sidebar-active {
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  background-color: rgb(63, 69, 73)
+  background-color: rgb(63, 69, 73);
   color: white;
   
 }
@@ -228,7 +247,8 @@ body.sidebar-active {
   color: white;
   padding: 10px;
   margin: 0;
-  font-size: 1em;
+  font-size: 0.7em;
+  font-family: Arial, sans-serif;
 }
 
 .sidebar-list {
@@ -268,15 +288,13 @@ body.sidebar-active {
       <br>
     </div>
     <!-- <span class="material-icons-outlined" onclick="closeSidebar()">close</span> -->
-    <div onclick="closeSidebar()" style="position: absolute; top: 28px; right: 20px; cursor: pointer; z-index: 10; margin-left: 15px;">
+    <div onclick="closeSidebar()" style="position: absolute; top: 24px; right: 20px; cursor: pointer; z-index: 10; margin-left: 15px;" id="removeOverlayButton">
       <svg viewBox="0 0 352 512" height="30" width="30" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
           <path fill="currentColor" d="m242.72 256 100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
       </svg>
   </div>
   
   </div>
-
-
 <style>
   .sidebar-list-item{
     border-top: 1px solid rgb(28, 27, 27);
@@ -371,10 +389,718 @@ body.sidebar-active {
 
 
       <!-- Main -->
-      <main class="main-container">
+      <main class="main-container heady"  >
         <div class="main-title">
           <br>
-     
+          <!-- <h2>Main Page</h2> -->
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  /* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card h3 {
+    font-size: 14px;
+  }
+
+  .card h1 {
+    font-size: 20px;
+  }
+
+  .material-icons-outlined {
+    font-size: 28px;
+  }
+}
+
+
+
+</style>
+
+
+        <!-- <div class="main-cards">
+
+          <div class="card" sty>
+            <div class="card-inner">
+              <h3> Available To Withdraw</h3>
+              <span class="material-icons-outlined">account_balance_wallet</span>
+            </div>
+            <h1>$ 0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>Yesterday</h3>
+              <span class="material-icons-outlined">paid</span>
+            </div>
+            <h1>$0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>Current Month </h3>
+              <span class="material-icons-outlined">groups</span>
+            </div>
+            <h1>$0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>30 Days</h3>
+              <span class="material-icons-outlined">notification_important</span>
+            </div>
+            <h1>$0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>$Total</h3>
+              <span class="material-icons-outlined">notification_important</span>
+            </div>
+            <h1>$-0.565</h1>
+          </div>
+
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+        .menu-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 10px; /* Optional spacing */
+          padding: 20px;
+          background-color: #f9f9f9;
+      }
+
+      .menu-item {
+          flex: 1 1 calc(20% - 10px); /* Five items per row on desktop */
+          max-width: calc(20% - 10px); /* Ensures proper alignment */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 20px;
+          border: 1px solid #ddd;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .menu-item svg {
+          width: 80px;
+          height: 80px;
+          fill: #bb030b; /* SVG color */
+          margin-bottom: 10px;
+      }
+
+      .menu-item-title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 8px;
+          color: #333;
+      }
+
+      .menu-item-desc {
+          font-size: 14px;
+          color: #666;
+      }
+
+      @media (max-width: 768px) {
+          .menu-item {
+              flex: 1 1 100%; /* Full width on mobile */
+              max-width: 100%;
+          }
+      }
+
+
+
+
+
+        </style>
+        
+<style>
+
+
+@media (min-width: 29.6875em) {
+          .fpTUvY {
+              flex-direction: row;
+          }
+      }
+      
+      
+      .fpTUvY {
+          border-width: 1px 1px 0px;
+          border-style: solid;
+          border-color: rgb(232, 232, 232);
+          margin-bottom: 10px;
+          display: flex
+      ;
+          flex-flow: column wrap;
+      }
+      
+      .czTQQw:first-of-type {
+          border-left: 0px none;
+      }
+      
+      @media (min-width: 29.6875em) {
+          .czTQQw {
+              flex: 50 0 auto;
+              width: 50%;
+          }
+      }
+      
+      .czTQQw {
+          font-size: 10px;
+          display: flex
+      ;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          height: 9em;
+          position: relative;
+          overflow: hidden;
+          z-index: 0;
+          text-align: center;
+          border-bottom: 4px solid rgb(187, 3, 11);
+          border-left: 1px solid rgb(232, 232, 232);
+      }
+      
+      .czTQQw > svg {
+          position: absolute;
+          bottom: -18%;
+          right: -9%;
+          z-index: -1;
+          color: rgba(0, 0, 0, 0.02);
+      }
+      
+      .VtuNT {
+          display: inline-block;
+          vertical-align: middle;
+          overflow: hidden;
+      }
+      
+      .czTQQw {
+          font-size: 10px;
+          display: flex
+      ;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          height: 9em;
+          position: relative;
+          overflow: hidden;
+          z-index: 0;
+          text-align: center;
+          border-bottom: 4px solid rgb(187, 3, 11);
+          border-left: 1px solid rgb(232, 232, 232);
+      }
+      
+      .czTQQw > svg {
+          position: absolute;
+          bottom: -18%;
+          right: -9%;
+          z-index: -1;
+          color: rgba(0, 0, 0, 0.02);
+      }
+      
+      .VtuNT {
+          display: inline-block;
+          vertical-align: middle;
+          overflow: hidden;
+      }
+      
+      svg:not(:root) {
+          overflow-clip-margin: content-box;
+          overflow: hidden;
+      }
+      
+      .czTQQw .MainInfoItemTitle-tss4v0-0, .czTQQw .MainInfoItemDesc-tss4v0-1 svg, .czTQQw .MilliBTCInsertion-tss4v0-2 {
+          color: rgb(187, 3, 11);
+      }
+      
+      .dhMTGm {
+          font-weight: 500;
+          font-size: 2.8em;
+          line-height: 1.2;
+          display: flex
+      ;
+          -webkit-box-align: center;
+          align-items: center;
+      }
+      
+      .jojdaR {
+          font-weight: 500;
+          font-size: 14px;
+          text-transform: uppercase;
+      }
+      
+      @media (min-width: 29.6875em) {
+          .djfjUw {
+              flex: 50 0 auto;
+              width: 50%;
+          }
+      }
+      
+      .djfjUw {
+          font-size: 10px;
+          display: flex
+      ;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          height: 9em;
+          position: relative;
+          overflow: hidden;
+          z-index: 0;
+          text-align: center;
+          border-bottom: 4px solid rgb(60, 159, 221);
+          border-left: 1px solid rgb(232, 232, 232);
+      }
+      
+      .djfjUw > svg {
+          position: absolute;
+          bottom: -18%;
+          right: -9%;
+          z-index: -1;
+          color: rgba(0, 0, 0, 0.02);
+      }
+      
+      .VtuNT {
+          display: inline-block;
+          vertical-align: middle;
+          overflow: hidden;
+      }
+      
+      .djfjUw .MainInfoItemTitle-tss4v0-0, .djfjUw .MainInfoItemDesc-tss4v0-1 svg, .djfjUw .MilliBTCInsertion-tss4v0-2 {
+          color: rgb(60, 159, 221);
+      }
+      
+      .dhMTGm {
+          font-weight: 500;
+          font-size: 2.8em;
+          line-height: 1.2;
+          display: flex
+      ;
+          -webkit-box-align: center;
+          align-items: center;
+      }
+      
+      .djfjUw .MainInfoItemTitle-tss4v0-0, .djfjUw .MainInfoItemDesc-tss4v0-1 svg, .djfjUw .MilliBTCInsertion-tss4v0-2 {
+          color: rgb(60, 159, 221);
+      }
+      
+      .jojdaR {
+          font-weight: 500;
+          font-size: 14px;
+          text-transform: uppercase;
+      }
+      
+      .djfjUw .MainInfoItemTitle-tss4v0-0, .djfjUw .MainInfoItemDesc-tss4v0-1 svg, .djfjUw .MilliBTCInsertion-tss4v0-2 {
+          color: rgb(60, 159, 221);
+      }
+      
+      @media (min-width: 29.6875em) {
+          .iKqFSE {
+              flex: 50 0 auto;
+              width: 50%;
+          }
+      }
+      
+      .iKqFSE {
+          font-size: 10px;
+          display: flex
+      ;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          height: 9em;
+          position: relative;
+          overflow: hidden;
+          z-index: 0;
+          text-align: center;
+          border-bottom: 4px solid rgb(255, 200, 62);
+          border-left: 1px solid rgb(232, 232, 232);
+      }
+      
+      .iKqFSE > svg {
+          position: absolute;
+          bottom: -18%;
+          right: -9%;
+          z-index: -1;
+          color: rgba(0, 0, 0, 0.02);
+      }
+      
+      .iKqFSE .MainInfoItemTitle-tss4v0-0, .iKqFSE .MainInfoItemDesc-tss4v0-1 svg, .iKqFSE .MilliBTCInsertion-tss4v0-2 {
+          color: rgb(255, 200, 62);
+      }
+      @media (min-width: 29.6875em) {
+          .jDvaPk {
+              flex: 50 0 auto;
+              width: 50%;
+          }
+      }
+      .jDvaPk {
+          font-size: 10px;
+          display: flex
+      ;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          height: 9em;
+          position: relative;
+          overflow: hidden;
+          z-index: 0;
+          text-align: center;
+          border-bottom: 4px solid rgb(115, 110, 175);
+          border-left: 1px solid rgb(232, 232, 232);
+      }
+      .jDvaPk > svg {
+          position: absolute;
+          bottom: -18%;
+          right: -9%;
+          z-index: -1;
+          color: rgba(0, 0, 0, 0.02);
+      }
+      .jDvaPk .MainInfoItemTitle-tss4v0-0, .jDvaPk .MainInfoItemDesc-tss4v0-1 svg, .jDvaPk .MilliBTCInsertion-tss4v0-2 {
+          color: rgb(115, 110, 175);
+      }
+      @media (min-width: 29.6875em) {
+          .cBFcJc {
+              flex: 50 0 auto;
+              width: 50%;
+          }
+      }
+      .cBFcJc {
+          font-size: 10px;
+          display: flex
+      ;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          height: 9em;
+          position: relative;
+          overflow: hidden;
+          z-index: 0;
+          text-align: center;
+          border-bottom: 4px solid rgb(0, 188, 212);
+          border-left: 1px solid rgb(232, 232, 232);
+      }
+      
+      <style>
+      .cBFcJc > svg {
+          position: absolute;
+          bottom: -18%;
+          right: -9%;
+          z-index: -1;
+          color: rgba(0, 0, 0, 0.02);
+      }
+      .cBFcJc .MainInfoItemTitle-tss4v0-0, .cBFcJc .MainInfoItemDesc-tss4v0-1 svg, .cBFcJc .MilliBTCInsertion-tss4v0-2 {
+          color: rgb(0, 188, 212);
+      }
+      .cBFcJc .MainInfoItemTitle-tss4v0-0, .cBFcJc .MainInfoItemDesc-tss4v0-1 svg, .cBFcJc .MilliBTCInsertion-tss4v0-2 {
+          color: rgb(0, 188, 212);
+      }
+      
+      .cBFcJc > svg {
+          position: absolute;
+          bottom: -18%;
+          right: -9%;
+          z-index: -1;
+          color: rgba(0, 0, 0, 0.02);
+      }
+      @media (min-width: 29.6875em) {
+          .fpTUvY {
+              flex-direction: row;
+          }
+      }
+      .fpTUvY {
+          border-width: 1px 1px 0px;
+          border-style: solid;
+          border-color: rgb(232, 232, 232);
+          margin-bottom: 10px;
+          display: flex;
+          flex-flow: column wrap;
+      }
+      
+      .eMBAFu {
+          position: relative;
+          display: flex
+      ;
+          flex-direction: column;
+          flex: 1 0 auto;
+      }
+      
+      
+
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .MainInfoItemSC-tss4v0-3 {
+    flex: 1 1 calc(20% - 1rem);
+    box-sizing: border-box;
+  }
+  @media screen and (max-width: 768px) {
+    .MainInfoItemSC-tss4v0-3 {
+      flex: 1 1 100%;
+    }
+  }
+
+
+
+</style>
+<div class="container " >
+  <div class="MainInfoItemSC-tss4v0-3 czTQQw">
+    <svg viewBox="0 0 640 512" height="161" width="161" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
+      <path fill="currentColor" d="M320 144c-53.02 0-96 50.14-96 112 0 61.85 42.98 112 96 112 53 0 96-50.13 96-112 0-61.86-42.98-112-96-112zm40 168c0 4.42-3.58 8-8 8h-64c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h16v-55.44l-.47.31a7.992 7.992 0 01-11.09-2.22l-8.88-13.31a7.992 7.992 0 012.22-11.09l15.33-10.22a23.99 23.99 0 0113.31-4.03H328c4.42 0 8 3.58 8 8v88h16c4.42 0 8 3.58 8 8v16zM608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zm-16 272c-35.35 0-64 28.65-64 64H112c0-35.35-28.65-64-64-64V176c35.35 0 64-28.65 64-64h416c0 35.35 28.65 64 64 64v160z"></path>
+    </svg>
+    <div class="MainInfoItemTitle-tss4v0-0 dhMTGm">
+      <svg viewBox="0 0 288 512" height="24" width="24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
+        <path fill="currentColor" d="m209.2 233.4-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"></path>
+      </svg>
+      <span>0</span>
+    </div>
+    <div class="MainInfoItemDesc-tss4v0-1 jojdaR">
+      <svg viewBox="0 0 640 512" height="21" width="21" aria-hidden="true" focusable="false" fill="rgb(187, 3, 11)" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="rgb(187, 3, 11)" d="M320 144c-53.02 0-96 50.14-96 112 0 61.85 42.98 112 96 112 53 0 96-50.13 96-112 0-61.86-42.98-112-96-112zm40 168c0 4.42-3.58 8-8 8h-64c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h16v-55.44l-.47.31a7.992 7.992 0 01-11.09-2.22l-8.88-13.31a7.992 7.992 0 012.22-11.09l15.33-10.22a23.99 23.99 0 0113.31-4.03H328c4.42 0 8 3.58 8 8v88h16c4.42 0 8 3.58 8 8v16zM608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zm-16 272c-35.35 0-64 28.65-64 64H112c0-35.35-28.65-64-64-64V176c35.35 0 64-28.65 64-64h416c0 35.35 28.65 64 64 64v160z"></path></svg>
+      Available to Withdraw
+    </div>
+  </div>
+
+
+ <div class="MainInfoItemSC-tss4v0-3 djfjUw"><svg viewBox="0 0 320 512" height="161" width="161" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c9.3-15.9-2.2-36-20.7-36z"></path></svg><div class="MainInfoItemTitle-tss4v0-0 dhMTGm"><svg viewBox="0 0 288 512" height="24" width="24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="m209.2 233.4-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"></path></svg><span>0</span></div><div class="MainInfoItemDesc-tss4v0-1 jojdaR"><svg viewBox="0 0 320 512" height="21" width="21" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c9.3-15.9-2.2-36-20.7-36z"></path></svg> yesterday</div></div>
+
+ <div class="MainInfoItemSC-tss4v0-3 iKqFSE"><svg viewBox="0 0 512 512" height="161" width="161" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"></path></svg><div class="MainInfoItemTitle-tss4v0-0 dhMTGm"><svg viewBox="0 0 288 512" height="24" width="24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="m209.2 233.4-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"></path></svg><span>0</span></div><div class="MainInfoItemDesc-tss4v0-1 jojdaR"><svg viewBox="0 0 512 512" height="21" width="21" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"></path></svg> current month</div></div>
+
+
+  <div class="MainInfoItemSC-tss4v0-3 jDvaPk"><svg viewBox="0 0 448 512" height="161" width="161" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 01-6-6V160h352v298a6 6 0 01-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"></path></svg><div class="MainInfoItemTitle-tss4v0-0 dhMTGm"><svg viewBox="0 0 288 512" height="24" width="24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="m209.2 233.4-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"></path></svg><span>0</span></div><div class="MainInfoItemDesc-tss4v0-1 jojdaR"><svg viewBox="0 0 448 512" height="21" width="21" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 01-6-6V160h352v298a6 6 0 01-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"></path></svg> 30 days</div></div>
+
+  <div class="MainInfoItemSC-tss4v0-3 cBFcJc"><svg viewBox="0 0 512 512" height="161" width="161" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg><div class="MainInfoItemTitle-tss4v0-0 dhMTGm"><svg viewBox="0 0 288 512" height="24" width="24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="m209.2 233.4-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"></path></svg><span>0</span></div><div class="MainInfoItemDesc-tss4v0-1 jojdaR"><svg viewBox="0 0 512 512" height="21" width="21" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg> total</div></div>
+
+
+  <!-- Duplicate the above component 4 more times -->
+</div>
+
+
+
+
+
+<style>
+  #mobilee {
+  display: none;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  #mobilee {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 12px !important;
+    font-weight: bold;
+    color: white
+  }
+  .jfUhSO .ButtonColored-sc-12mrpv7-0 {
+    padding: 1em 2em;
+}
+.iYbrmD {
+    text-align: center;
+    padding: 0.715em 1.5625em;
+    border-width: 1px;
+    border-style: solid;
+    text-transform: uppercase;
+    border-radius: 0px;
+    border-color: rgb(2, 178, 130);
+    background-color: rgb(2, 178, 130);
+    transition: 0.3s;
+    font-size: 0.875em;
+    line-height: 16.1px;
+}
+}
+
+</style>
+
+<button style="padding: 1em 2em; font-size: 12px;" id="mobilee" class="Button-g7u4km-0 ButtonColored-sc-12mrpv7-0 iVdBvT iYbrmD"><svg viewBox="0 0 512 512" height="14" width="14" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"></path></svg>Refresh statistics</button>
+
+
+
+
+
+
+<br>
+
+<style>
+  .containerr {
+    display: flex;
+    flex-direction: column; /* Stack vertically by default (mobile view) */
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    /* max-width: 400px; */
+  }
+
+  /* Desktop view with larger screen (like Windows) */
+  @media (min-width: 1024px) {
+    .containerr {
+      flex-direction: row; /* Align items in a row for desktop view */
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Space between form groups for desktop */
+    .form-group {
+      margin-right: 15px;
+    }
+
+    /* Space between the button and the last form group */
+    .apply-btn {
+      margin-left: 15px;
+    }
+  }
+
+  select:focus {
+    border-color: rgb(2, 178, 130); /* Green border on focus */
+  }
+
+  /* Customizing the selected option */
+  select option:checked {
+    background-color: rgb(2, 178, 130); /* Green background when selected */
+    color: white; /* White text for selected option */
+  }
+</style>
+
+<div class="containerr">
+  <div class="form-group" style="display: flex; flex-direction: column;">
+    <label for="time-interval" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Time interval</label>
+    <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
+      <option value="7 days">7 days</option>
+      <option value="1 month">1 month</option>
+      <option value="6 months">6 months</option>
+      /* <option value="1 year">1 year</option> */
+    </select>
+  </div>
+  <div class="form-group" style="display: flex; flex-direction: column;">
+    <label for="currency" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Currency</label>
+    <select id="currency" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
+      <option value="USD">USD</option>
+      
+   
+    </select>
+  </div>
+  <button class="apply-btn" style="background-color: rgb(2, 178, 130); color: white; font-size: 16px; font-weight: bold; padding: 12px; border: none; border-radius: 4px; cursor: pointer; text-align: center; transition: background-color 0.3s;">APPLY</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  /* Mobile Responsive Size Reduction */
+@media (max-width: 768px) {
+  .charts-card {
+    width: 90%;  /* Make the chart cards smaller */
+    padding-left: 10px;
+  }
+
+  #bar-chart, #area-chart {
+    width: 100%;
+    height: 170px;  /* Reduce the height of the charts */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .charts-card {
+    width: 90%;  /* Make the chart cards even smaller */
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 15px;
+  }
+
+  #bar-chart, #area-chart {
+    width: 100%;
+    height: 150px;  /* Further reduce the height for very small screens */
+  }
+}
+
+</style>
+
+
+
+
+
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <h2 class="chart-title" style="color: rgb(100 100 100);">Conversion Statistics</h2>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title" style="color: rgb(100 100 100);">Registration Statistics</h2>
+            <div id="area-chart"></div>
+          </div>
+
         </div>
 
 
@@ -394,6 +1120,55 @@ body.sidebar-active {
 
 
 
+<br>
+
+
+
+<style>
+@media only screen and (max-width: 768px) {
+    #mobile_id {
+      display: block; /* Show mobile layout */
+    }
+    #windows_id {
+      display: none; /* Hide Windows layout */
+    }
+  }
+
+  /* Target devices with minimum width of 1024px (Windows-like devices) */
+  @media only screen and (min-width: 1024px) {
+    #windows_id {
+      display: block; /* Show Windows layout */
+    }
+    #mobile_id {
+      display: none; /* Hide Mobile layout */
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+<div id="mobile_id" style="font-family: Arial, sans-serif; width: 350px; color: #606060; background-color: rgb(255, 255, 255); border: 1px solid #c3c3c3; border-radius: 5px; overflow: hidden; margin: auto;">
+  
+  
+</div>
+
+<script>
+  function toggleSubRow(button) {
+    const subRowWrapper = button.parentElement.nextElementSibling;
+    if (subRowWrapper.style.display === 'none' || subRowWrapper.style.display === '') {
+      subRowWrapper.style.display = 'block';
+      button.textContent = '-';
+    } else {
+      subRowWrapper.style.display = 'none';
+      button.textContent = '+';
+    }
+  }
+</script>
 
 
 
@@ -410,6 +1185,25 @@ body.sidebar-active {
 
 
 
+
+
+
+<div id="windows_id" style="font-family: Arial, sans-serif; width: 80vw; color: white; background-color: rgb(255, 255, 255); border: 1px solid #c3c3c3; border-radius: 5px; overflow: hidden; margin: auto;">
+
+</div>
+
+<script>
+  function toggleSubRow(button) {
+    const subRowWrapper = button.parentElement.nextElementSibling;
+    if (subRowWrapper.style.display === 'none' || subRowWrapper.style.display === '') {
+      subRowWrapper.style.display = 'block';
+      button.textContent = '-';
+    } else {
+      subRowWrapper.style.display = 'none';
+      button.textContent = '+';
+    }
+  }
+</script>
 
 
 
@@ -421,7 +1215,7 @@ body.sidebar-active {
 
         
 
-        <footer style="background-color: rgb(44, 52, 58); color: rgb(159, 168, 188); padding: 25px 10px; font-size: 13px; flex: 0 0 auto; width:100%;">
+        <footer style="background-color: rgb(44, 52, 58); color: rgb(159, 168, 188); padding: 25px 10px; font-size: 13px; flex: 0 0 auto;">
           <div style="display: flex; justify-content: center; align-items: center;">
             <p style="text-align: center; margin: 0;">
               20BETS Partners uses cookies to enhance your website experience. By continuing to browse the 20BETS Partners website, you consent to the use of these cookies. <br>
@@ -456,10 +1250,48 @@ body.sidebar-active {
       </main>
       <!-- End Main -->
 
+
+
+ 
+
+      
     </div>
 
-    <!-- Scripts -->
-    <!-- ApexCharts -->
+   <script>
+              
+              const button1 = document.getElementById('overlayButton1');
+const removeButton = document.getElementById('removeOverlayButton');
+
+const overlayyy = document.getElementById('overlayyy');
+
+// Get all elements with the class 'heady'
+const headers = document.querySelectorAll('.heady');
+
+// Add event listener to add the overlay class to each header when button is clicked
+button1.addEventListener('click', function() {
+    headers.forEach(header => {
+        header.classList.add('overlayy');
+    });
+});
+
+// Add event listener to remove the overlay class from each header
+removeButton.addEventListener('click', function() {
+    headers.forEach(header => {
+        header.classList.remove('overlayy');
+    });
+});
+
+button1.addEventListener('click', function() {
+    overlayyy.style.display = 'block'; // Show the overlay
+});
+
+// Hide the overlay when removeButton is clicked
+removeButton.addEventListener('click', function() {
+    overlayyy.style.display = 'none';  // Hide the overlay
+});
+
+
+   </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
