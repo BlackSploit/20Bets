@@ -303,3 +303,29 @@ body > div > header > div.header-right{
   color: rgb(100,100,100) !important;
 }
 
+@media (max-width: 480px) {
+  .main-cards {
+    grid-template-columns: 1fr; /* Stack the cards vertically on small screens */
+    gap: 8px;
+    padding: 5px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .card h3 {
+    font-size: 12px;
+  }
+
+  .card h1 {
+    font-size: 18px;
+  }
+
+  .material-icons-outlined {
+    font-size: 34px !important;
+    margin-left: 10px;
+    color: rgb(2, 178, 130);
+
+  }
+}

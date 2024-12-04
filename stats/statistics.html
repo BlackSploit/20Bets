@@ -24,9 +24,8 @@
 
       <!-- Header -->
       <header class="header" style="background-color: rgb(28, 27, 27);">
-        <div class="menu-icon" onclick="openSidebar()">
-          <span class="material-icons-outlined">menu</span>
-        </div>
+        <img src="./images/1733058129438 (1).png" alt="" srcset="" style="width: 75px; margin-left: -10px;">
+        
 
 
 
@@ -90,17 +89,8 @@
           }
         </style>
         
-
-          
-          
         </div>
       
-
-
-
-
-
-
         <div class="header-right" style="position: relative;">
           <span onclick="toggleDropdown()" style="cursor: pointer;">
             <!-- SVG icon instead of account_circle -->
@@ -109,6 +99,10 @@
             </svg>
             
           </span>
+
+          <div class="menu-icon" onclick="openSidebar()">
+            <span class="material-icons-outlined">menu</span>
+          </div>
           <span onclick="toggleDropdown()" style="cursor: pointer; color: white;"> 
             <!-- <svg viewBox="0 0 512 512" height="15" width="15" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 0 0 0 34L157.67 377a24 24 0 0 0 34 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z"></path></svg> -->
           </span>
@@ -262,10 +256,19 @@ body.sidebar-active {
   <div class="sidebar-title" style="background-color: rgb(28, 27, 27) !important; border-left: 1px solid #333;">
     <div class="sidebar-brand">
       <!-- <span class="material-icons-outlined"></span>  -->
-      <img src="./images/1733058129438 (1).png" alt="Logo" style="max-width: 100px; height: 70%; padding: 10px 0; display: block; margin: 0 auto;">
+
+      <style>
+        @media (max-width: 768px) {
+          #mobileeee {
+            display: block !important;
+          }
+        }
+      </style>
+      <!-- <img id="mobileeeee" src="./images/1733058129438 (1).png" alt="Logo" style="max-width: 100px; height: 70%; padding: 10px 0; display: block; margin: 0 auto; "> -->
+      <br>
     </div>
     <!-- <span class="material-icons-outlined" onclick="closeSidebar()">close</span> -->
-    <div onclick="closeSidebar()" style="position: absolute; top: 22px; right: 20px; cursor: pointer; z-index: 10;">
+    <div onclick="closeSidebar()" style="position: absolute; top: 28px; right: 20px; cursor: pointer; z-index: 10; margin-left: 15px;">
       <svg viewBox="0 0 352 512" height="30" width="30" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
           <path fill="currentColor" d="m242.72 256 100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
       </svg>
@@ -278,7 +281,7 @@ body.sidebar-active {
     padding: 15px;
   }
 </style>
-  <h2 class="sidebar-heading" style="background-color: rgb(28, 27, 27) !important; border-top:1px solid #333">MAIN MENU</h2>
+  <h2 class="sidebar-heading" style="background-color: rgb(28, 27, 27) !important; border-top:1px solid rgb(21, 21, 21); border-left: 1px solid #333;">MAIN MENU</h2>
   <ul class="sidebar-list">
     <li class="sidebar-list-item" style="border-left: 5px solid rgb(2, 178, 130); background-color: rgb(28, 27, 27); border-top: 1px solid #333">
       <a href="./statistics.html" target="_blank" style="color: rgb(2, 178, 130) !important;">
@@ -409,29 +412,7 @@ body.sidebar-active {
   }
 }
 
-@media (max-width: 480px) {
-  .main-cards {
-    grid-template-columns: 1fr; /* Stack the cards vertically on small screens */
-    gap: 8px;
-    padding: 5px;
-  }
 
-  .card {
-    padding: 8px;
-  }
-
-  .card h3 {
-    font-size: 12px;
-  }
-
-  .card h1 {
-    font-size: 18px;
-  }
-
-  .material-icons-outlined {
-    font-size: 24px;
-  }
-}
 
 </style>
 

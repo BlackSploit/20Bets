@@ -24,9 +24,8 @@
 
       <!-- Header -->
       <header class="header" style="background-color: rgb(28, 27, 27);">
-        <div class="menu-icon" onclick="openSidebar()">
-          <span class="material-icons-outlined">menu</span>
-        </div>
+        <img src="./images/1733058129438 (1).png" alt="" srcset="" style="width: 75px; margin-left: -10px;">
+        
 
 
 
@@ -45,7 +44,33 @@
         </style>
         <div class="header-left" id="mobileee">
           
-        
+          <button style="
+          text-align: center; 
+          padding: 0.5em 1em; 
+          border-width: 1px; 
+          border-style: solid; 
+          text-transform: uppercase; 
+          border-radius: 5px; 
+          border-color: rgb(46, 46, 46); 
+          background-color: rgb(2, 178, 130); 
+          transition: 0.3s; 
+          font-size: 0.875em; 
+          line-height: 16.1px; 
+          color: rgb(30, 30, 30); /* Black text color */
+          font-family: Arial, sans-serif; 
+          font-weight: bold; 
+          letter-spacing: 0.5px; 
+          display: inline-flex; 
+          align-items: center; 
+          cursor: pointer;
+          white-space: nowrap; /* Ensures text stays on one line */
+        "
+        aria-hidden="true" focusable="false">
+          <svg viewBox="0 0 512 512" height="14" width="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 5px;">
+            <path fill="currentColor" d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"></path>
+          </svg>
+          Refresh Statistics
+        </button>
         
         <style>
           /* Responsive styling for mobile devices */
@@ -64,17 +89,8 @@
           }
         </style>
         
-
-          
-          
         </div>
       
-
-
-
-
-
-
         <div class="header-right" style="position: relative;">
           <span onclick="toggleDropdown()" style="cursor: pointer;">
             <!-- SVG icon instead of account_circle -->
@@ -83,6 +99,10 @@
             </svg>
             
           </span>
+
+          <div class="menu-icon" onclick="openSidebar()" >
+            <span class="material-icons-outlined" style="margin-top: -15px !important;">menu</span>
+          </div>
           <span onclick="toggleDropdown()" style="cursor: pointer; color: white;"> 
             <!-- <svg viewBox="0 0 512 512" height="15" width="15" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 0 0 0 34L157.67 377a24 24 0 0 0 34 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z"></path></svg> -->
           </span>
@@ -236,23 +256,34 @@ body.sidebar-active {
   <div class="sidebar-title" style="background-color: rgb(28, 27, 27) !important; border-left: 1px solid #333;">
     <div class="sidebar-brand">
       <!-- <span class="material-icons-outlined"></span>  -->
-      <img src="./images/1733058129438 (1).png" alt="Logo" style="max-width: 100px; height: 70%; padding: 10px 0; display: block; margin: 0 auto;">
+
+      <style>
+        @media (max-width: 768px) {
+          #mobileeee {
+            display: block !important;
+          }
+        }
+      </style>
+      <!-- <img id="mobileeeee" src="./images/1733058129438 (1).png" alt="Logo" style="max-width: 100px; height: 70%; padding: 10px 0; display: block; margin: 0 auto; "> -->
+      <br>
     </div>
     <!-- <span class="material-icons-outlined" onclick="closeSidebar()">close</span> -->
-    <div onclick="closeSidebar()" style="position: absolute; top: 22px; right: 20px; cursor: pointer; z-index: 10;">
+    <div onclick="closeSidebar()" style="position: absolute; top: 28px; right: 20px; cursor: pointer; z-index: 10; margin-left: 15px;">
       <svg viewBox="0 0 352 512" height="30" width="30" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
           <path fill="currentColor" d="m242.72 256 100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
       </svg>
   </div>
   
   </div>
+
+
 <style>
   .sidebar-list-item{
     border-top: 1px solid rgb(28, 27, 27);
     padding: 15px;
   }
 </style>
-  <h2 class="sidebar-heading" style="background-color: rgb(28, 27, 27) !important; border-top:1px solid #333">MAIN MENU</h2>
+  <h2 class="sidebar-heading" style="background-color: rgb(28, 27, 27) !important; border-top:1px solid rgb(21, 21, 21); border-left: 1px solid #333;">MAIN MENU</h2>
   <ul class="sidebar-list">
     <li class="sidebar-list-item" >
         <a href="./statistics.html" target="_blank">
