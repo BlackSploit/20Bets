@@ -29,7 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px 0 30px;
+  padding: 0 10px 0 30px;
   box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
 }
 
@@ -323,7 +323,8 @@ body > div > header > div.header-right{
   }
 
   .material-icons-outlined {
-    font-size: 34px !important;
+    font-size: 39px !important;
+    font-weight: 400;
     margin-left: 10px;
     color: rgb(2, 178, 130);
 
@@ -335,3 +336,31 @@ body > div > header > div.header-right{
   background: rgba(16, 16, 16, 0.768) !important;
   
 } */
+
+
+body{
+  font-family: 'Futura Cyrillic Book' ,Arial, Helvetica, sans-serif;
+}
+
+    .overlayyy {
+position: fixed;   /* Fixes the overlay in place */
+top: 0;
+left: 0;
+width: 170px;      /* Full viewport width */
+height: 100vh;     /* Full viewport height */
+background: rgb(0 0 0 / 80%) !important; /* Semi-transparent background */
+display: none;   
+z-index: 1;     /* Ensure it stays on top of other elements */
+}
+
+#mobileee {
+  display: block;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  #mobileee {
+    display: none !important;
+  }
+}
+

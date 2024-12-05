@@ -34,7 +34,7 @@
     left: 0;
     width: 170px;      /* Full viewport width */
     height: 100vh;     /* Full viewport height */
-    background: rgba(16, 16, 16, 0.768) !important; /* Semi-transparent background */
+    background: rgb(0 0 0 / 80%) !important; /* Semi-transparent background */
     display: none;   
     z-index: 1;     /* Ensure it stays on top of other elements */
   }
@@ -275,8 +275,6 @@ body.sidebar-active {
 <aside id="sidebar">
   <div class="sidebar-title" style="background-color: rgb(28, 27, 27) !important; border-left: 1px solid #333;">
     <div class="sidebar-brand">
-      <!-- <span class="material-icons-outlined"></span>  -->
-
       <style>
         @media (max-width: 768px) {
           #mobileeee {
@@ -284,11 +282,9 @@ body.sidebar-active {
           }
         }
       </style>
-      <!-- <img id="mobileeeee" src="./images/1733058129438 (1).png" alt="Logo" style="max-width: 100px; height: 70%; padding: 10px 0; display: block; margin: 0 auto; "> -->
-      <br>
     </div>
     <!-- <span class="material-icons-outlined" onclick="closeSidebar()">close</span> -->
-    <div onclick="closeSidebar()" style="position: fixed; top: 24px; left: 70px; cursor: pointer; z-index: 9999999; margin-left: 15px;" id="removeOverlayButton" >
+    <div onclick="closeSidebar()" style="position: fixed; top: 24px; left: 63px; cursor: pointer; z-index: 9999999; margin-left: 15px;" id="removeOverlayButton" >
       <svg viewBox="0 0 352 512" height="30" width="30" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
           <path fill="currentColor" d="m242.72 256 100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
       </svg>
@@ -301,7 +297,7 @@ body.sidebar-active {
     padding: 15px;
   }
 </style>
-  <h2 class="sidebar-heading" style="background-color: rgb(28, 27, 27) !important; border-top:0.1px solid rgb(21, 21, 21) !important; border-left: 1px solid #333;">MAIN MENU</h2>
+  <h2 class="sidebar-heading" style="background-color: rgb(28, 27, 27) !important; border-top:1px dotted rgb(28, 27, 27) !important; border-left: 1px solid #333;">MAIN MENU</h2>
   <ul class="sidebar-list">
     <li class="sidebar-list-item" style="border-left: 5px solid rgb(2, 178, 130); background-color: rgb(28, 27, 27); border-top: 1px solid #333">
       <a href="./statistics.html" target="_blank" style="color: rgb(2, 178, 130) !important;">
@@ -912,7 +908,47 @@ body.sidebar-active {
     <div class="MainInfoItemDesc-tss4v0-1 jojdaR">
       <svg viewBox="0 0 640 512" height="21" width="21" aria-hidden="true" focusable="false" fill="rgb(187, 3, 11)" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="rgb(187, 3, 11)" d="M320 144c-53.02 0-96 50.14-96 112 0 61.85 42.98 112 96 112 53 0 96-50.13 96-112 0-61.86-42.98-112-96-112zm40 168c0 4.42-3.58 8-8 8h-64c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h16v-55.44l-.47.31a7.992 7.992 0 01-11.09-2.22l-8.88-13.31a7.992 7.992 0 012.22-11.09l15.33-10.22a23.99 23.99 0 0113.31-4.03H328c4.42 0 8 3.58 8 8v88h16c4.42 0 8 3.58 8 8v16zM608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zm-16 272c-35.35 0-64 28.65-64 64H112c0-35.35-28.65-64-64-64V176c35.35 0 64-28.65 64-64h416c0 35.35 28.65 64 64 64v160z"></path></svg>
       Available to Withdraw
+      <svg
+      viewBox="0 0 512 512"
+      height="15"
+      width="15"
+      aria-hidden="true"
+      focusable="false"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      style="position: relative; cursor: pointer;"
+      onclick="togglePopup(this)"
+    >
+      <!-- Main icon path -->
+      <path
+        fill="currentColor"
+        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+      ></path>
+      
+      <!-- Popup message -->
+      <text
+        x="20"
+        y="40"
+        id="popup"
+        style="
+          visibility: hidden;
+          font-size: 12px;
+          background: white;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 4px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          fill: black;
+        "
+      >
+        Commission account on hold <tspan style="fill: rgb(187, 3, 11);">$0</tspan>
+      </text>
+    </svg>
+    
+
     </div>
+
+    
   </div>
 
 
@@ -930,7 +966,13 @@ body.sidebar-active {
 </div>
 
 
+<script>
+  function togglePopup(svg) {
+  const popup = svg.querySelector("#popup");
+  popup.style.visibility = popup.style.visibility === "visible" ? "hidden" : "visible";
+}
 
+</script>
 
 
 <style>

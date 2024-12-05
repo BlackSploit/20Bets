@@ -14,32 +14,18 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <style>
-      body{
-        font-family: 'Futura Cyrillic Book' ,Arial, Helvetica, sans-serif;
-      }
-    </style>
+    
     <div class="grid-container">
 
+      <!-- Header -->
       <header class="header" style="background-color: rgb(28, 27, 27);">
         <img src="./images/1733058129438 (1).png" alt="" srcset="" style="width: 85px; margin-left: -10px;">
         
 
 
-
-
-        <style>
-          #mobileee {
-          display: block;
-        }
-        
-        /* Media query for mobile view */
-        @media (max-width: 768px) {
-          #mobileee {
-            display: none !important;
-          }
-        }
-        </style>
+      
+        <div id="overlayyy" class="overlayyy"></div>
+ 
         <div class="header-left" id="mobileee">
           
           <button style="
@@ -88,7 +74,17 @@
         </style>
         
         </div>
-      
+      <style>
+        @media (max-width: 480px) {
+    .material-icons-outlined {
+        font-size: 39px !important;
+        font-weight: 400;
+        margin-left: 10px;
+        margin-top: -15px !important;
+        color: rgb(2, 178, 130);
+    }
+}
+      </style>
         <div class="header-right" style="position: relative;">
           <span onclick="toggleDropdown()" style="cursor: pointer;">
             <!-- SVG icon instead of account_circle -->
@@ -98,8 +94,8 @@
             
           </span>
 
-          <div class="menu-icon" onclick="openSidebar()" >
-            <span class="material-icons-outlined" style="margin-top: -15px !important;">menu</span>
+          <div class="menu-icon" onclick="openSidebar()" id="overlayButton1" style="margin-top: -10px !important;">
+            <span class="material-icons-outlined">menu</span>
           </div>
           <span onclick="toggleDropdown()" style="cursor: pointer; color: white;"> 
             <!-- <svg viewBox="0 0 512 512" height="15" width="15" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT"><path fill="currentColor" d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 0 0 0 34L157.67 377a24 24 0 0 0 34 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24z"></path></svg> -->
@@ -173,6 +169,7 @@
   #sidebar {
   width: 250px;
   /* Other styles for sidebar */
+  z-index: 999999;
 }
 @media (max-width: 600px) {
             #sidebar {
@@ -216,7 +213,7 @@ body.sidebar-active {
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  background-color: rgb(63, 69, 73)
+  background-color: rgb(63, 69, 73);
   color: white;
   
 }
@@ -226,7 +223,8 @@ body.sidebar-active {
   color: white;
   padding: 10px;
   margin: 0;
-  font-size: 1em;
+  font-size: 0.7em;
+  font-family: Arial, sans-serif;
 }
 
 .sidebar-list {
@@ -253,8 +251,6 @@ body.sidebar-active {
 <aside id="sidebar">
   <div class="sidebar-title" style="background-color: rgb(28, 27, 27) !important; border-left: 1px solid #333;">
     <div class="sidebar-brand">
-      <!-- <span class="material-icons-outlined"></span>  -->
-
       <style>
         @media (max-width: 768px) {
           #mobileeee {
@@ -262,26 +258,22 @@ body.sidebar-active {
           }
         }
       </style>
-      <!-- <img id="mobileeeee" src="./images/1733058129438 (1).png" alt="Logo" style="max-width: 100px; height: 70%; padding: 10px 0; display: block; margin: 0 auto; "> -->
-      <br>
     </div>
     <!-- <span class="material-icons-outlined" onclick="closeSidebar()">close</span> -->
-    <div onclick="closeSidebar()" style="position: absolute; top: 28px; right: 20px; cursor: pointer; z-index: 10; margin-left: 15px;">
+    <div onclick="closeSidebar()" style="position: fixed; top: 24px; left: 63px; cursor: pointer; z-index: 9999999; margin-left: 15px;" id="removeOverlayButton" >
       <svg viewBox="0 0 352 512" height="30" width="30" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 VtuNT">
           <path fill="currentColor" d="m242.72 256 100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
       </svg>
   </div>
   
   </div>
-
-
 <style>
   .sidebar-list-item{
     border-top: 1px solid rgb(28, 27, 27);
     padding: 15px;
   }
 </style>
-  <h2 class="sidebar-heading" style="background-color: rgb(28, 27, 27) !important; border-top:1px solid rgb(21, 21, 21); border-left: 1px solid #333;">MAIN MENU</h2>
+  <h2 class="sidebar-heading" style="background-color: rgb(28, 27, 27) !important; border-top:1px dotted rgb(28, 27, 27) !important; border-left: 1px solid #333;">MAIN MENU</h2>
   <ul class="sidebar-list">
     <li class="sidebar-list-item" >
       <a href="./statistics.html" target="_blank">
@@ -369,7 +361,7 @@ body.sidebar-active {
 
 
       <!-- Main -->
-      <main class="main-container">
+      <main class="main-container heady"  >
         <div class="main-title">
           <br>
           <!-- <h2>Main Page</h2> -->
@@ -382,7 +374,17 @@ body.sidebar-active {
 
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -392,202 +394,225 @@ body.sidebar-active {
 
 
         <h1 style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin: 10px 0; color: #333; margin-left: 5px;">
-            User: <span style="color: rgb(2, 178, 130);">Anvar</span>
-          </h1>
-          
-          <!-- Mobile responsiveness -->
-          <style>
-            @media (max-width: 768px) {
-              h1 {
-                font-size: 1.5rem;
-              }
+          User: <span style="color: rgb(2, 178, 130);">Anvar</span>
+        </h1>
+        
+        <!-- Mobile responsiveness -->
+        <style>
+          @media (max-width: 768px) {
+            h1 {
+              font-size: 1.5rem;
             }
-          
-            @media (max-width: 480px) {
-              h1 {
-                font-size: 1.2rem;
-              }
+          }
+        
+          @media (max-width: 480px) {
+            h1 {
+              font-size: 1.2rem;
             }
-          </style>
-          
-          <!-- Google Font for 'Poppins' -->
-          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-          
-          
-          
-          
-          
-          
-          
-          
-          <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-            <!-- First Box -->
-            <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-              <h3 style="margin-bottom: 15px; color: #333;">Contact Details</h3>
-              
-          
-              <form>
-                <div style="margin-bottom: 20px;">
-                  <label for="firstName" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">First name *</label>
-                  <input type="text" id="firstName" placeholder="Anvar" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" required />
-                </div>
+          }
+        </style>
+        
+        <!-- Google Font for 'Poppins' -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        
+        
+        
+        
+        
+        
+        
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+          <!-- First Box -->
+          <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h3 style="margin-bottom: 15px; color: #333;">Contact Details</h3>
             
-                <div style="margin-bottom: 20px;">
-                  <label for="lastName" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Last name *</label>
-                  <input type="text" id="lastName" placeholder="Rs" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" required />
-                </div>
-            
-                <div style="margin-bottom: 20px;">
-                  <label for="phoneNumber" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Phone number</label>
-                  <input type="text" id="phoneNumber" placeholder="+919745250848" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" />
-                </div>
-            
-                <div style="margin-bottom: 20px;">
-                  <label for="messenger" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Messenger</label>
-                  <select id="messenger" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
-                    <option>Other</option>
-                  </select>
-                </div>
-            
-                <div style="margin-bottom: 20px;">
-                  <label for="messengerUsername" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Messenger username</label>
-                  <input type="text" id="messengerUsername" placeholder="@emilia_wheel" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" />
-                </div>
-            
-                <div style="margin-bottom: 20px;">
-                  <label for="country" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Country</label>
-                  <select id="country" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
-                    <option>India</option>
-                    <option>USA</option>
-                    <option>UK</option>
-                  </select>
-                </div>
-            
-                <div style="margin-bottom: 20px;">
-                  <label for="language" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Notification Language</label>
-                  <select id="language" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
-                    <option>English</option>
-                    <option>Spanish</option>
-                    <option>French</option>
-                  </select>
-                </div>
-            
-                <div style="text-align: center;">
-                  <button type="submit" style="padding: 12px 20px; background-color: #2ab7a1; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; width: 100%; transition: background-color 0.3s ease;">
-                    Save Changes
-                  </button>
-                </div>
-              </form>
-          
-            </div>
-          
-            <!-- Second Box -->
-            <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-              <h3 style="margin-bottom: 15px; color: #333;">Payment Details</h3>
-          
+        
+            <form>
+              <div style="margin-bottom: 20px;">
+                <label for="firstName" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">First name *</label>
+                <input type="text" id="firstName" placeholder="Anvar" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" required />
+              </div>
           
               <div style="margin-bottom: 20px;">
-                <label for="player_account" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Preferred payment method</label>
-                <select id="player_account" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
-                  <option>player account</option>
+                <label for="lastName" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Last name *</label>
+                <input type="text" id="lastName" placeholder="Rs" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" required />
+              </div>
+          
+              <div style="margin-bottom: 20px;">
+                <label for="phoneNumber" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Phone number</label>
+                <input type="text" id="phoneNumber" placeholder="+919745250848" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" />
+              </div>
+          
+              <div style="margin-bottom: 20px;">
+                <label for="messenger" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Messenger</label>
+                <select id="messenger" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+                  <option>Other</option>
                 </select>
               </div>
           
               <div style="margin-bottom: 20px;">
-                <label for="10649857" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">User account</label>
-                <select id="10649857" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
-                  <option>1034375386</option>
+                <label for="messengerUsername" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Messenger username</label>
+                <input type="text" id="messengerUsername" placeholder="@emilia_wheel" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;" />
+              </div>
+          
+              <div style="margin-bottom: 20px;">
+                <label for="country" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Country</label>
+                <select id="country" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+                  <option>India</option>
+                  <option>USA</option>
+                  <option>UK</option>
                 </select>
               </div>
           
-              <h6 style="margin-bottom: 15px; color: #333;">*To change your payment details, please contact Partner support</h6>
-            </div>
+              <div style="margin-bottom: 20px;">
+                <label for="language" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Notification Language</label>
+                <select id="language" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+                  <option>English</option>
+                  <option>Spanish</option>
+                  <option>French</option>
+                </select>
+              </div>
           
-            <!-- Third Box -->
-            <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-              <h3 style="margin-bottom: 15px; color: #333;">Change Password</h3>
-              <div style="margin-bottom: 20px;">
-                <label for="Old_pass" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Old password</label>
-                <input type="password" id="Old_pass" placeholder="Enter your old password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #fff; color: #333; transition: border-color 0.3s ease;" required />
-              </div>
-              
-              <div style="margin-bottom: 20px;">
-                <label for="New_Pass" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">New password</label>
-                <input type="password" id="New_Pass" placeholder="Enter a new password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #fff; color: #333; transition: border-color 0.3s ease;" required />
-              </div>
-              
-              <div style="margin-bottom: 20px;">
-                <label for="repeat" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Repeat new password</label>
-                <input type="password" id="repeat" placeholder="Repeat the new password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #fff; color: #333; transition: border-color 0.3s ease;" required />
-              </div>
-              
               <div style="text-align: center;">
                 <button type="submit" style="padding: 12px 20px; background-color: #2ab7a1; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; width: 100%; transition: background-color 0.3s ease;">
-                  Change Password
+                  Save Changes
                 </button>
               </div>
-              
-          
+            </form>
+        
+          </div>
+        
+          <!-- Second Box -->
+          <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h3 style="margin-bottom: 15px; color: #333;">Payment Details</h3>
+        
+        
+            <div style="margin-bottom: 20px;">
+              <label for="player_account" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Preferred payment method</label>
+              <select id="player_account" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+                <option>player account</option>
+              </select>
             </div>
-          
-          
-          
-          
-          
-            <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-              <h3 style="margin-bottom: 15px; color: #333;">Subscriptions</h3>
-              
-              <form style="display: flex; flex-direction: column; gap: 15px;">
-                <label style="font-size: 1rem; color: #555;">
-                  <input type="checkbox" style="margin-right: 10px;" /> Company news
-                </label>
-                
-                <label style="font-size: 1rem; color: #555;">
-                  <input type="checkbox" style="margin-right: 10px;" /> Affiliate program news
-                </label>
-                
-                <label style="font-size: 1rem; color: #555;">
-                  <input type="checkbox" style="margin-right: 10px;" /> Promotions and promo materials
-                </label>
-                
-                <label style="font-size: 1rem; color: #555;">
-                  <input type="checkbox" style="margin-right: 10px;" /> Training materials
-                </label>
-                
-                <label style="font-size: 1rem; color: #555;">
-                  <input type="checkbox" style="margin-right: 10px;" /> New domain alerts
-                </label>
-                
-                <label style="font-size: 1rem; color: #555;">
-                  <input type="checkbox" style="margin-right: 10px;" /> Sports promotions
-                </label>
-                
-                <label style="font-size: 1rem; color: #555;">
-                  <input type="checkbox" style="margin-right: 10px;" /> Casino promotions
-                </label>
-                
-                <div style="text-align: center; margin-top: 20px;">
-                  <button type="submit" style="padding: 12px 20px; background-color: #2ab7a1; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; width: 100%; transition: background-color 0.3s ease;">
-                    Confirm
-                  </button>
-                </div>
-              </form>
+        
+            <div style="margin-bottom: 20px;">
+              <label for="10649857" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">User account</label>
+              <select id="10649857" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #f9f9f9; color: #333; transition: border-color 0.3s ease;">
+                <option>1034375386</option>
+              </select>
+            </div>
+        
+            <h6 style="margin-bottom: 15px; color: #333;">*To change your payment details, please contact Partner support</h6>
+          </div>
+        
+          <!-- Third Box -->
+          <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h3 style="margin-bottom: 15px; color: #333;">Change Password</h3>
+            <div style="margin-bottom: 20px;">
+              <label for="Old_pass" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Old password</label>
+              <input type="password" id="Old_pass" placeholder="Enter your old password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #fff; color: #333; transition: border-color 0.3s ease;" required />
             </div>
             
+            <div style="margin-bottom: 20px;">
+              <label for="New_Pass" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">New password</label>
+              <input type="password" id="New_Pass" placeholder="Enter a new password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #fff; color: #333; transition: border-color 0.3s ease;" required />
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+              <label for="repeat" style="display: block; font-size: 1rem; color: #555; margin-bottom: 5px; font-weight: bold;">Repeat new password</label>
+              <input type="password" id="repeat" placeholder="Repeat the new password" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; background-color: #fff; color: #333; transition: border-color 0.3s ease;" required />
+            </div>
+            
+            <div style="text-align: center;">
+              <button type="submit" style="padding: 12px 20px; background-color: #2ab7a1; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; width: 100%; transition: background-color 0.3s ease;">
+                Change Password
+              </button>
+            </div>
+            
+        
+          </div>
+        
+        
+        
+        
+        
+          <div style="flex: 1 1 30%; background-color: #ffffff; border: 1px solid #ddd; border-radius: 5px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h3 style="margin-bottom: 15px; color: #333;">Subscriptions</h3>
+            
+            <form style="display: flex; flex-direction: column; gap: 15px;">
+              <label style="font-size: 1rem; color: #555;">
+                <input type="checkbox" style="margin-right: 10px;" /> Company news
+              </label>
+              
+              <label style="font-size: 1rem; color: #555;">
+                <input type="checkbox" style="margin-right: 10px;" /> Affiliate program news
+              </label>
+              
+              <label style="font-size: 1rem; color: #555;">
+                <input type="checkbox" style="margin-right: 10px;" /> Promotions and promo materials
+              </label>
+              
+              <label style="font-size: 1rem; color: #555;">
+                <input type="checkbox" style="margin-right: 10px;" /> Training materials
+              </label>
+              
+              <label style="font-size: 1rem; color: #555;">
+                <input type="checkbox" style="margin-right: 10px;" /> New domain alerts
+              </label>
+              
+              <label style="font-size: 1rem; color: #555;">
+                <input type="checkbox" style="margin-right: 10px;" /> Sports promotions
+              </label>
+              
+              <label style="font-size: 1rem; color: #555;">
+                <input type="checkbox" style="margin-right: 10px;" /> Casino promotions
+              </label>
+              
+              <div style="text-align: center; margin-top: 20px;">
+                <button type="submit" style="padding: 12px 20px; background-color: #2ab7a1; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; width: 100%; transition: background-color 0.3s ease;">
+                  Confirm
+                </button>
+              </div>
+            </form>
           </div>
           
-          <!-- Mobile responsiveness -->
-          <style>
-            @media (max-width: 768px) {
-              div[style*="display: flex"] {
-                flex-direction: column;
-              }
-              div[style*="flex: 1 1 30%"] {
-                flex: 1 1 100%;
-              }
+        </div>
+        
+        <!-- Mobile responsiveness -->
+        <style>
+          @media (max-width: 768px) {
+            div[style*="display: flex"] {
+              flex-direction: column;
             }
-          </style>
-          
+            div[style*="flex: 1 1 30%"] {
+              flex: 1 1 100%;
+            }
+          }
+        </style>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -598,47 +623,84 @@ body.sidebar-active {
 
 
         
-        <footer style="background-color: rgb(44, 52, 58); color: rgb(159, 168, 188); padding: 25px 10px; font-size: 13px; flex: 0 0 auto; ">
-            <div style="display: flex; justify-content: center; align-items: center;">
-              <p style="text-align: center; margin: 0;">
-                20BETS Partners uses cookies to enhance your website experience. By continuing to browse the 20BETS Partners website, you consent to the use of these cookies. <br>
-                <a href="./cookies.html" style="color: rgb(2, 178, 130); text-decoration: none;">Find out more</a>
-              </p>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-              <div style="text-align: center;">
-                <nav style="display: inline-block;">
-                  <ul style="list-style-type: none; padding: 0;">
-                    <li style="display: inline-block; margin-right: 20px;">
-                      <a href="./contacts.html" style="color: rgb(255, 255, 255); text-decoration: none;">Contacts</a>
-                    </li>
-                    <li style="display: inline-block; margin-right: 20px;">
-                      <a href="./news.html" style="color: rgb(255, 255, 255); text-decoration: none;">News</a>
-                    </li>
-                    <li style="display: inline-block; margin-right: 20px;">
-                      <a href="./privacy_policy.html" style="color: rgb(255, 255, 255); text-decoration: none;">Privacy Policy</a>
-                    </li>
-                    <li style="display: inline-block;">
-                      <a href="./cookies.html" style="color: rgb(255, 255, 255); text-decoration: none;">Cookie Policy</a>
-                    </li>
-                  </ul>
-                </nav>
-                <div style="color: rgb(159, 168, 188); margin-top: 10px;">
-                  Copyright © 2023-2024 20BETS Partners. All rights reserved.
-                </div>
+
+        <footer style="background-color: rgb(44, 52, 58); color: rgb(159, 168, 188); padding: 25px 10px; font-size: 13px; flex: 0 0 auto;">
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <p style="text-align: center; margin: 0;">
+              20BETS Partners uses cookies to enhance your website experience. By continuing to browse the 20BETS Partners website, you consent to the use of these cookies. <br>
+              <a href="./cookies.html" style="color: rgb(2, 178, 130); text-decoration: none;">Find out more</a>
+            </p>
+          </div>
+          <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+            <div style="text-align: center;">
+              <nav style="display: inline-block;">
+                <ul style="list-style-type: none; padding: 0;">
+                  <li style="display: inline-block; margin-right: 20px;">
+                    <a href="./contacts.html" style="color: rgb(255, 255, 255); text-decoration: none;">Contacts</a>
+                  </li>
+                  <li style="display: inline-block; margin-right: 20px;">
+                    <a href="./news.html" style="color: rgb(255, 255, 255); text-decoration: none;">News</a>
+                  </li>
+                  <li style="display: inline-block; margin-right: 20px;">
+                    <a href="./privacy_policy.html" style="color: rgb(255, 255, 255); text-decoration: none;">Privacy Policy</a>
+                  </li>
+                  <li style="display: inline-block;">
+                    <a href="./cookies.html" style="color: rgb(255, 255, 255); text-decoration: none;">Cookie Policy</a>
+                  </li>
+                </ul>
+              </nav>
+              <div style="color: rgb(159, 168, 188); margin-top: 10px;">
+                Copyright © 2023-2024 20BETS Partners. All rights reserved.
               </div>
             </div>
-          </footer>
+          </div>
+        </footer>
         
       </main>
       <!-- End Main -->
 
 
 
+ 
 
       
     </div>
 
+   <script>
+              
+              const button1 = document.getElementById('overlayButton1');
+const removeButton = document.getElementById('removeOverlayButton');
+
+const overlayyy = document.getElementById('overlayyy');
+
+// Get all elements with the class 'heady'
+const headers = document.querySelectorAll('.heady');
+
+// Add event listener to add the overlay class to each header when button is clicked
+button1.addEventListener('click', function() {
+    headers.forEach(header => {
+        header.classList.add('overlayy');
+    });
+});
+
+// Add event listener to remove the overlay class from each header
+removeButton.addEventListener('click', function() {
+    headers.forEach(header => {
+        header.classList.remove('overlayy');
+    });
+});
+
+button1.addEventListener('click', function() {
+    overlayyy.style.display = 'block'; // Show the overlay
+});
+
+// Hide the overlay when removeButton is clicked
+removeButton.addEventListener('click', function() {
+    overlayyy.style.display = 'none';  // Hide the overlay
+});
+
+
+   </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
