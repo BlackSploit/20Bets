@@ -452,15 +452,16 @@ body.sidebar-active {
           <!-- Start Date Input Field -->
           <div class="form-group" style="display: flex; flex-direction: column;">
             <label for="time-interval" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Currency</label>
-            <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
-              
+            <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s; color: rgb(79, 79, 79)">
+
               <option value="1 month">USD</option>
             </select>
           </div>
         
           <div class="form-group" style="display: flex; flex-direction: column;">
             <label for="time-interval" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Country</label>
-            <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
+            <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s; color: rgb(79, 79, 79)">
+
               <option value="7 days">India</option>
             </select>
           </div>
@@ -477,6 +478,8 @@ body.sidebar-active {
           <div class="form-group" style="display: flex; flex-direction: column;">
             <label for="time-interval" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Website</label>
             <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
+              <option value="" selected hidden>Select...</option>
+
               <option value="7 days">All</option>
               <option value="7 days">https://t.me/4567892232fdbscjv</option>
             </select>
@@ -486,7 +489,7 @@ body.sidebar-active {
           <!-- Time Interval Dropdown -->
           <div class="form-group" style="display: flex; flex-direction: column;">
             <label for="time-interval" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Time Interval</label>
-            <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
+            <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s; color: rgb(79, 79, 79)">
               <option value="7 days">Exact period</option>
               <option value="1 month">Today</option>
               <option value="6 months">Yesterday</option>
@@ -634,21 +637,21 @@ body.sidebar-active {
         
         <div class="form-group" style="display: flex; flex-direction: column;">
           <label for="time-interval" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Regisration Source</label>
-          <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s; color: gray">
-            <option value="1 month">Android</option>
-            <option value="7 days">Mobile</option>
-           
-            <option value="1 month">IOS</option>
+          <select id="time-interval" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s; color: rgb(79, 79, 79)">
+            <option value="" selected hidden>Select...</option>
+
+            <option value="reg">Registration</option>
+            
           </select>
         </div>
         
         
         <div class="form-group" style="display: flex; flex-direction: column;">
           <label for="currency" style="font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #333;">Campaign</label>
-          <select id="currency" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s;">
+          <select id="currency" style="padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; outline: none; background-color: #fff; transition: border-color 0.3s; color: rgb(79, 79, 79)">
+            <option value="" selected hidden>Select...</option>
             <option value="USD">20Bet - Registration</option>
-            <!-- <option value="USD">RS link all</option>
-            <option value="USD">APK_download</option> -->
+         
            
           </select>
         </div>
@@ -774,23 +777,6 @@ body.sidebar-active {
                     </td>
                   </tr>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
                   <tr>
                     <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">
                       <button onclick="toggleRow(this)" style="width: 30px; height: 30px; background-color: #02b282; color: white; border: none; border-radius: 50%; cursor: pointer; font-weight: bold; font-size: 15px !important; position: relative; top: -4px; left: -4px;">+</button>
@@ -826,6 +812,33 @@ body.sidebar-active {
                   </tr>
                 </tbody>
               </table>
+
+
+
+              
+
+
+              <h6>Conditonal rendering template for BACKEND</h6>
+              <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 12px;">
+                <thead>
+                  <tr style="background: #222; color: #fff;">
+                    <th style="text-align: center; padding: 8px; border: 1px solid #ddd;">Website ID</th>
+                    <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Website
+                      <img src="./images/sort-alt.7a8dba26027f3af92d4c2eb6f9ad0d0d.svg" alt="Sort" style="width: 10px; height: 10px; margin-left: 5px;">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="2" style="text-align: center; padding: 50px; border: 1px solid #ddd; background: #f0f0f0; color: gray; font-size: 13px; font-weight: lighter;">
+                      No Information
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              
+
             
               <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12px;">
                 <span>Records from 1 to 1 (1 record in total)</span>

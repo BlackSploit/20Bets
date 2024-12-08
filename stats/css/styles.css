@@ -364,3 +364,6 @@ z-index: 1;     /* Ensure it stays on top of other elements */
   }
 }
 
+select{
+  color: rgb(79, 79, 79);
+}
