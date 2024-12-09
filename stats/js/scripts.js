@@ -135,7 +135,7 @@ const areaChartOptions = {
   series: [
     {
       name: 'Registrations',
-      data: [31, 40, 28, 51, 42, 109, 100],
+      data: [45, 40, 28, 51, 42, 109, 100],
     },
     {
       name: 'Commission Amount',
